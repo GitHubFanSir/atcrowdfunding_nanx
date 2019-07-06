@@ -349,20 +349,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka-server/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="14" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="138">
+              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -1406,7 +1397,7 @@
       <workItem from="1562202529737" duration="4681000" />
       <workItem from="1562286586536" duration="24320000" />
       <workItem from="1562373101738" duration="238000" />
-      <workItem from="1562373926785" duration="2911000" />
+      <workItem from="1562373926785" duration="3188000" />
     </task>
     <task id="LOCAL-00001" summary="项目  init">
       <created>1560820792483</created>
@@ -1465,7 +1456,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292672000" />
+    <option name="totallyTimeSpent" value="292949000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1491,7 +1482,7 @@
       <window_info anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.890604" weight="0.5685997" />
       <window_info anchor="bottom" id="Spring" order="1" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50268096" side_tool="true" weight="0.708628" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" sideWeight="0.49932975" visible="true" weight="0.52899575" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" sideWeight="0.49932975" visible="true" weight="0.5572843" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49865952" weight="0.37340876" />
       <window_info anchor="bottom" id="Java Enterprise" order="6" weight="0.3281471" />
@@ -2002,8 +1993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="138">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
