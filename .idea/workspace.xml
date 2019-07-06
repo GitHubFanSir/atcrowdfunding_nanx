@@ -1,0 +1,2099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/MemberAuthorityConfig.java" line="28" mnemonic="8" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd78e76e-a40b-43c8-82e4-8e7054d02f26" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/AppMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/FeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/MemberAuthorityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/PageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/PayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/OrderFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/ProjectFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/UserServiceFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Gantt.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/MindMap.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Sequnece.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Wireframe.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/WorkBreakdown.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/znode节点.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/rebel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/fonts" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/js" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/bootstrap/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css/carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css/doc.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome4.2" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome4.2/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome4.2/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome4.2/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome4.2/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/fontawesome4.2/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/carousel-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/carousel-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/carousel-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/p1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/p2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/p3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/p3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product_detail_body.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/product_detail_head.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/services-box1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/services-box2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/services-box3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/img/services-box4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/jquery" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/jquery/jQuery-form-serializer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/jquery/jquery-2.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/jquery/jquery-form.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/jquery/jquery.pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/mobile" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/mobile/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/mobile/need" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/mobile/need/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/layer/theme/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/script" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/script/back-to-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/script/docs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/script/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/include" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/include/include.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/member" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/member.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/member/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/member/minecrowdfunding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/member/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/order" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/order/pay-step-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/order/pay-step-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/start-step-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/start-step-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/start-step-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/start-step-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/start.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfunding" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfunding/app" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/state/ImgTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/state/OrderStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/state/ProjectStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/member" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/member/MemberRegisterReqVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/order" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/order/OrderCreatePageVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/order/OrderCreateVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/order/OrderListVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/pay" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/pay/PayAsyncVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/pay/PayResultVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/pay/PayVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/project" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/project/BaseVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/project/ProjectBaseInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/project/ProjectReturnReqVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/member" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectAllAllInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectAllInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectReturnConfirmPageVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectReturnDetailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/interceptor" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/interceptor/AuthorityInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/resources/rebel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/test/java/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/Config" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/Config/MemberAuthorityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/Config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/common" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/component" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/component/AlipayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/controller" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TTransactionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/service" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/service/IOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/service/feign" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/service/feign/ProjectFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/service/impl" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/vo" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/vo/req" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/vo/resp" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/vo/resp/OrderRespVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/rebel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/zfbinfo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/aop" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/aop/ProjectCreateAop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/common" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/common/ExceptionResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/common/annotation" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/common/annotation/TempProjectCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/component" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/component/OssTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/config" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/config/MemberAuthorityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller/ProjectCreateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller/ProjectInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller/ProjectOperationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectImagesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectInitiatorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/IProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/IReturnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/impl" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/impl/ReturnServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/vo" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/vo/ProjectRedisStorageVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/vo/req" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/vo/resp" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/rebel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/static/uploadFile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/static/uploadFile_hyj.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/rebel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/rebel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfundingapp" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfundingapp/AtcrowfundingAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/AtcrowfundingAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/1_close.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/1_close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/1_open.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/1_open.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/diy/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/line_conn.gif" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/line_conn.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/zTreeStandard.gif" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/zTreeStandard.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/zTreeStandard.png" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/static/ztree/img/zTreeStandard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfundingapp" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfundingapp/AtcrowfundingAppApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfunding/app/AtcrowfundingAppApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/config" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TReturn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/common/RedisPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/common/RedisPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/common/ServerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/common/ServerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/state/MessageTemplateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/state/MessageTemplateEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/util/AppendSensitiveUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/util/AppendSensitiveUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/util/FtpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/util/FtpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/util/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/util/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/MemberRegisterVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/MemberLoginVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/member/MemberLoginRespVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-commons/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/AtcrowdfundingOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/AtcrowdfundingOrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/mapper" beforeDir="true" afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/mapper" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/mappers/TOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/mappers/TOrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TProjectTagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectTagMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TProjectTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TReturnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TReturnMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TTagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TTagMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/order/mapper/TTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/AtcrowdfundingProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/AtcrowdfundingProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectTagMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectTagMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TReturnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TReturnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TTagMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TTagMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/AtcrowdfundingUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/AtcrowdfundingUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/controller/UserLoginRegistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/controller/UserLoginRegistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/filter/SessionExpireFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/filter/SessionExpireFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/mapper/TMemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/mapper/TMemberMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/service/IMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/service/IMemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/service/impl/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-user/src/test/java/com/atnanx/atcrowdfunding/user/AtcrowdfundingUserApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/atcrowdfunding-user/src/test/java/com/atnanx/atcrowdfunding/user/AtcrowdfundingUserApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/atcrowdfunding-user/target/" />
+    <ignored path="$PROJECT_DIR$/atcrowdfunding-project/target/" />
+    <ignored path="$PROJECT_DIR$/atcrowdfunding-order/target/" />
+    <ignored path="$PROJECT_DIR$/atcrowfunding-app/target/" />
+    <ignored path="$PROJECT_DIR$/atcrowdfunding-commons/target/" />
+    <ignored path="$PROJECT_DIR$/eureka-server/target/" />
+    <ignored path="$PROJECT_DIR$/atcrowdfunding-app/target/" />
+    <ignored mask="*.mvn" />
+    <ignored mask="*.iml" />
+    <ignored mask=".gitignore" />
+    <ignored mask=".idea" />
+    <ignored mask="mvnw" />
+    <ignored mask="mvnw.cmd" />
+    <ignored path="F:\ideaProject\atcrowdfunding-front-parent\.idea\shelf/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CommittedChangesCache">
+    <option name="refreshEnabled" value="true" />
+    <option name="refreshInterval" value="300" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="atcrowdfunding-front-parent" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eureka-server/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="14" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="UML Class" />
+        <option value="UML Use Case" />
+        <option value="UML Sequence" />
+        <option value="UML Activity" />
+        <option value="UML Component" />
+        <option value="UML State" />
+        <option value="UML Object" />
+        <option value="UML Gantt" />
+        <option value="UML MindMap" />
+        <option value="Salt Wireframe" />
+        <option value="Work Breakdown Structure" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>alipayProperties</find>
+      <find>rtnCount</find>
+      <find>REDIS_LOGIN_MEMBER_PREFIX</find>
+      <find>REDIS_TEMP_PROJECT_PREFIX</find>
+      <find>mapper</find>
+      <find>starter</find>
+      <find>return</find>
+      <find>processor</find>
+      <find>mysql</find>
+      <find>test</find>
+      <find>GB18030</find>
+      <find>ServerResponse</find>
+      <find>public</find>
+      <find>sysTags</find>
+      <find>AppResponse</find>
+      <find>getProjectInfo</find>
+      <find>accessToken</find>
+      <find>isOK</find>
+      <find>all/index</find>
+      <find>登录</find>
+      <find>project/start-step-1.html</find>
+      <find>start-step-3.html</find>
+      <find>checkMobile</find>
+      <find>memberMapper</find>
+      <find>src</find>
+      <find>src=&quot;</find>
+      <find>css</find>
+      <find>jquery</find>
+      <find>/static</find>
+      <find>container</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>atcrowdfunding</replace>
+      <replace>Msg</replace>
+      <replace>msg</replace>
+      <replace>insert</replace>
+      <replace>insertSelective</replace>
+      <replace>alipayConfig</replace>
+      <replace>UTF-8</replace>
+      <replace>ServerResponse`</replace>
+      <replace>Serv</replace>
+      <replace>ServerResponse</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/order/PayResultVo.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/req/pay/PayResultVo.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TProject.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectMapper.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller/ProjectCreateController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/ProjectFeignService.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-order/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/znode节点.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/11.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/1.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/Class.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/UseCase.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Sequnece.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Activity.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Component.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/State.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Gantt.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/MindMap.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Wireframe.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/WorkBreakdown.puml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/puml/Object.puml" />
+        <option value="E:/Program Files/feiq/Recv Files/11、Java高级/JUC线程池_stream流复习/juc/StreamDemo.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/IProjectService.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller/ProjectInfoController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/impl/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfunding/app/AtcrowfundingAppApplicationTests.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/AppMvcConfig.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/PayController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/UserServiceFeign.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/Const.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/Config/MemberAuthorityConfig.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/config/MemberAuthorityConfig.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/interceptor/AuthorityInterceptor.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/mapper/TMemberMapper.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/service/impl/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/AtcrowdfundingUserApplication.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectAllInfoVo.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectMapper.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectAllAllInfoVo.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/MemberAuthorityConfig.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-order/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\ProgramData\repository" />
+        <option name="mavenHome" value="F:/JAVA TOOL/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="F:\JAVA TOOL\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="atcrowdfunding-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="atcrowdfunding-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="atcrowdfunding-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="com.atnanx:atcrowdfunding-commons:1.0-SNAPSHOT" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="eureka-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="eureka-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-280" />
+    <option name="y" value="20" />
+    <option name="width" value="1935" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+              <item name="resp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding-front-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding-front-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="DefaultPlantUmlFileTemplate" value="Work Breakdown Structure" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15236259" />
+    <property name="project.structure.side.proportion" value="0.31171787" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.atnanx.atcrowdfunding.project.vo.req" />
+      <recent name="com.atnanx.atcrowdfunding.project.vo" />
+      <recent name="com.atnanx.atcrowdfunding.project.service" />
+      <recent name="com.atnanx.atcrowdfunding.user.service" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.atnanx.atcrowdfunding.order.service" />
+      <recent name="com.atnanx.atcrowdfunding" />
+      <recent name="com.atnanx.atcrowdfunding.user" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\java\com\atnanx\atcrowfunding\app" />
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-commons\src\main\java\com\atnanx\atcrowdfunding\core\vo\req\order" />
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\resources\templates" />
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\resources\templates\user" />
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\resources\templates\product" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atnanx.atcrowdfunding.core.vo.req.order" />
+      <recent name="com.atnanx.atcrowdfunding.core.vo.req.member" />
+      <recent name="com.atnanx.atcrowdfunding.project.vo.req" />
+      <recent name="com.atnanx.atcrowdfunding.order.Config" />
+      <recent name="com.atnanx.atcrowdfunding.project.vo.resp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\java\com\atnanx\atcrowfunding\app\puml" />
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\resources\templates\user" />
+      <recent name="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app\src\main\resources\templates\product" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.30213353" />
+  </component>
+  <component name="RunManager" selected="Compound.尚筹网">
+    <configuration name="AtcrowfundingAppApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atnanx.atcrowfunding.app.AtcrowfundingAppApplicationTests" />
+      <module name="atcrowdfunding-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atnanx.atcrowfunding.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="尚筹网" type="CompoundRunConfigurationType">
+      <toRun name="AtcrowdfundingOrderApplication (1)" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AtcrowdfundingProjectApplication (2)" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AtcrowfundingAppApplication (1)" type="SpringBootApplicationConfigurationType" />
+      <toRun name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AtcrowdfundingUserApplication (1)" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="AtcrowdfundingUserApplication (1)" type="SpringBootApplicationConfigurationType" />
+      <toRun name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AtcrowdfundingProjectApplication (2)" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AtcrowfundingAppApplicationTests.fun12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="atcrowdfunding-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atnanx.atcrowfunding.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atnanx.atcrowfunding.app" />
+      <option name="MAIN_CLASS_NAME" value="com.atnanx.atcrowfunding.app.AtcrowfundingAppApplicationTests" />
+      <option name="METHOD_NAME" value="fun12" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowfundingAppApplicationTests.fun2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="atcrowdfunding-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atnanx.atcrowfunding.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atnanx.atcrowfunding.app" />
+      <option name="MAIN_CLASS_NAME" value="com.atnanx.atcrowfunding.app.AtcrowfundingAppApplicationTests" />
+      <option name="METHOD_NAME" value="fun2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowfundingAppApplicationTests.fun4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="atcrowdfunding-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atnanx.atcrowfunding.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atnanx.atcrowfunding.app" />
+      <option name="MAIN_CLASS_NAME" value="com.atnanx.atcrowfunding.app.AtcrowfundingAppApplicationTests" />
+      <option name="METHOD_NAME" value="fun4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowfundingAppApplicationTests.fun5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="atcrowdfunding-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atnanx.atcrowfunding.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atnanx.atcrowfunding.app" />
+      <option name="MAIN_CLASS_NAME" value="com.atnanx.atcrowfunding.app.AtcrowfundingAppApplicationTests" />
+      <option name="METHOD_NAME" value="fun5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowdfundingOrderApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="atcrowdfunding-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atnanx.atcrowdfunding.order.AtcrowdfundingOrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowdfundingProjectApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="atcrowdfunding-project" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atnanx.atcrowdfunding.project.AtcrowdfundingProjectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowdfundingUserApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="atcrowdfunding-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atnanx.atcrowdfunding.user.AtcrowdfundingUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtcrowfundingAppApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="atcrowdfunding-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atnanx.atcrowfunding.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atnanx.atcrowfunding.app.AtcrowfundingAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atnanx.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat1" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Default_(Template)_Project" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51895" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="51896" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AtcrowfundingAppApplicationTests" />
+      <item itemvalue="Compound.尚筹网" />
+      <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun2" />
+      <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun4" />
+      <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun12" />
+      <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun5" />
+      <item itemvalue="Spring Boot.AtcrowdfundingOrderApplication (1)" />
+      <item itemvalue="Spring Boot.AtcrowdfundingProjectApplication (2)" />
+      <item itemvalue="Spring Boot.AtcrowdfundingUserApplication (1)" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.AtcrowfundingAppApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun5" />
+        <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun2" />
+        <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun12" />
+        <item itemvalue="Application.AtcrowfundingAppApplicationTests" />
+        <item itemvalue="JUnit.AtcrowfundingAppApplicationTests.fun4" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\dell\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\.idea" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\.idea" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-app" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-commons" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-commons" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-order" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-order" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-project" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-project" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-user" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\atcrowdfunding-user" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent\eureka-server" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent\eureka-server" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\ideaProject\atcrowdfunding-front-parent" />
+          <option name="myCopyRoot" value="F:\ideaProject\atcrowdfunding-front-parent" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd78e76e-a40b-43c8-82e4-8e7054d02f26" name="Default Changelist" comment="" />
+      <created>1560737281442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560737281442</updated>
+      <workItem from="1560737283580" duration="21407000" />
+      <workItem from="1560785005631" duration="1945000" />
+      <workItem from="1560818803027" duration="4158000" />
+      <workItem from="1560823109010" duration="12801000" />
+      <workItem from="1560860841980" duration="6844000" />
+      <workItem from="1560874281685" duration="304000" />
+      <workItem from="1560904417223" duration="30464000" />
+      <workItem from="1560993949599" duration="31565000" />
+      <workItem from="1561075418495" duration="5166000" />
+      <workItem from="1561093371259" duration="1175000" />
+      <workItem from="1561120864051" duration="2841000" />
+      <workItem from="1561163650702" duration="13483000" />
+      <workItem from="1561262612761" duration="25076000" />
+      <workItem from="1561336444000" duration="418000" />
+      <workItem from="1561336946881" duration="17998000" />
+      <workItem from="1561422944079" duration="6072000" />
+      <workItem from="1561509119774" duration="4855000" />
+      <workItem from="1561599382154" duration="1306000" />
+      <workItem from="1561681586414" duration="10872000" />
+      <workItem from="1561768208158" duration="1629000" />
+      <workItem from="1561788123150" duration="670000" />
+      <workItem from="1561798167639" duration="1193000" />
+      <workItem from="1561800094955" duration="127000" />
+      <workItem from="1561800877511" duration="4862000" />
+      <workItem from="1561859175643" duration="32306000" />
+      <workItem from="1561940984314" duration="12922000" />
+      <workItem from="1562027504931" duration="5766000" />
+      <workItem from="1562113840950" duration="2296000" />
+      <workItem from="1562202529737" duration="4681000" />
+      <workItem from="1562286586536" duration="24320000" />
+      <workItem from="1562373101738" duration="238000" />
+      <workItem from="1562373926785" duration="2911000" />
+    </task>
+    <task id="LOCAL-00001" summary="项目  init">
+      <created>1560820792483</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560820792483</updated>
+    </task>
+    <task id="LOCAL-00002" summary="project first init">
+      <created>1560861916751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560861916751</updated>
+    </task>
+    <task id="LOCAL-00003" summary="用户登录(登录成功存储在redis并设置ex有效期),设置filter在redis的accessToken还有效时，让user的有效时间重置 、 注册功能，手机验证码存取(1分钟数量控制，redis存储), 阿里短信工具类封装， jsonutil、appendSensitiveUtil 等工具类封装">
+      <created>1561019319696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561019319696</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="test_fun1 - 2019.06.20 at 14h 30m 19s.xml">
+      <configuration name="test.fun1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_contextLoads - 2019.07.05 at 13h 02m 49s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun2 - 2019.07.05 at 13h 05m 50s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun3 - 2019.07.05 at 13h 07m 44s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun3 - 2019.07.05 at 13h 08m 46s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun4 - 2019.07.05 at 13h 13m 31s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun12 - 2019.07.05 at 13h 16m 44s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun12 - 2019.07.05 at 13h 17m 04s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun2 - 2019.07.05 at 13h 17m 38s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AtcrowfundingAppApplicationTests_fun5 - 2019.07.05 at 13h 18m 56s.xml">
+      <configuration name="AtcrowfundingAppApplicationTests.fun5" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="292672000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.5007072" side_tool="true" weight="0.32573727" />
+      <window_info id="Web" order="5" sideWeight="0.5020408" side_tool="true" weight="0.3424933" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4979592" visible="true" weight="0.29624665" />
+      <window_info id="JRebel" order="7" sideWeight="0.5018657" side_tool="true" weight="0.33042896" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.890604" weight="0.5685997" />
+      <window_info anchor="bottom" id="Spring" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50268096" side_tool="true" weight="0.708628" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" sideWeight="0.49932975" visible="true" weight="0.52899575" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49865952" weight="0.37340876" />
+      <window_info anchor="bottom" id="Java Enterprise" order="6" weight="0.3281471" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49865952" weight="0.37623763" />
+      <window_info anchor="bottom" id="JRebel Executor" order="9" weight="0.430956" />
+      <window_info anchor="bottom" id="JRebel Console" order="10" sideWeight="0.10939597" side_tool="true" weight="0.5756241" />
+      <window_info anchor="bottom" id="Message" order="11" />
+      <window_info anchor="bottom" id="Find" order="12" weight="0.4775449" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.3946252" />
+      <window_info anchor="bottom" id="Debug" order="14" weight="0.49550897" />
+      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
+      <window_info anchor="bottom" id="SVN Repositories" order="17" weight="0.329429" />
+      <window_info anchor="bottom" id="TODO" order="18" sideWeight="0.50075185" weight="0.59688824" />
+      <window_info anchor="bottom" id="Problems" order="19" weight="0.32956153" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Database" order="2" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.32908848" />
+      <window_info anchor="right" id="Maven" order="7" sideWeight="0.498998" weight="0.38270777" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.501002" side_tool="true" weight="0.46715817" />
+      <window_info anchor="right" id="PlantUML" order="11" weight="0.3281879" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="项目  init" />
+    <MESSAGE value="忽略iml" />
+    <MESSAGE value="project first init" />
+    <MESSAGE value="用户登录(登录成功存储在redis并设置ex有效期),设置filter在redis的accessToken还有效时，让user的有效时间重置 、 注册功能，手机验证码存取(1分钟数量控制，redis存储), 阿里短信工具类封装， jsonutil、appendSensitiveUtil 等工具类封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户登录(登录成功存储在redis并设置ex有效期),设置filter在redis的accessToken还有效时，让user的有效时间重置 、 注册功能，手机验证码存取(1分钟数量控制，redis存储), 阿里短信工具类封装， jsonutil、appendSensitiveUtil 等工具类封装" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfunding/app/AtcrowfundingAppApplicationTests.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/atcrowdfunding_front_parent$test_fun1.ic" NAME="test.fun1 Coverage Results" MODIFIED="1561012208004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.hyj.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>client.getCommonResponse(request)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/test/java/com/atnanx/atcrowfunding/app/AtcrowfundingAppApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Program Files/Java/jdk1.8.0_202/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/include/include.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/start-step-1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/project/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/SwaggerConfig.java" />
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/PayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2055">
+          <caret line="89" column="45" lean-forward="true" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/common/ServerResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1576#1577#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/UserServiceFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/controller/UserLoginRegistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/member/MemberLoginRespVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/member/minecrowdfunding.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/constant/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/OrderFeignService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/support/RedirectAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/support/RedirectAttributesModelMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/config/MemberAuthorityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/Config/MemberAuthorityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/InterceptorRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="506" column="19" selection-start-line="506" selection-start-column="19" selection-end-line="506" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/AppMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="39" column="71" lean-forward="true" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/mappers/TMemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/mapper/TMemberMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/component/AliSmsTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/service/impl/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/java/com/atnanx/atcrowdfunding/user/AtcrowdfundingUserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-user/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/IProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/controller/ProjectInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding>
+            <element signature="e#1369#1370#0" expanded="true" />
+            <element signature="e#1428#1429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/mapper/TProjectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-project/src/main/resources/mappers/TProjectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="341" column="112" selection-start-line="341" selection-start-column="112" selection-end-line="341" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectAllInfoVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/feign/ProjectFeignService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-project/src/main/java/com/atnanx/atcrowdfunding/project/service/impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7348">
+          <caret line="363" column="74" selection-start-line="363" selection-start-column="74" selection-end-line="363" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/interceptor/AuthorityInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="59" selection-start-line="59" selection-end-line="60" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-order/src/main/java/com/atnanx/atcrowdfunding/order/AtcrowdfundingOrderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/vo/resp/project/ProjectAllAllInfoVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-commons/src/main/java/com/atnanx/atcrowdfunding/core/bean/TProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/atnanx/eurekaserver/EurekaServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2019">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/java/com/atnanx/atcrowfunding/app/config/MemberAuthorityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-app/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="175" column="43" selection-start-line="175" selection-start-column="43" selection-end-line="175" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5384#5391#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5757#5764#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6102#6109#0" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-order/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/eureka-server.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="14" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31171787" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring (atcrowdfunding-user)|Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31171787" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31171787" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31171787" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>atcrowdfunding-commons</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31171787" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31171787" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,52 @@
+eureka:
+  client:
+    fetch-registry: true #拉取注册在注册中心的所有服务
+    register-with-eureka: true #注册在注册中心
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      prefer-ip-address: true #使用ip注册进去
+    #ip-address:
+feign:
+  httpclient:
+    connection-timeout: 20000
+  client:
+    config:
+      default:
+        connect-timeout: 60000
+        read-timeout: 60000
+  hystrix:
+    enabled: true  #开启feign基于hystrix服务容错功能
+    #ribbon:
+    #ReadTimeout: 60000
+    #ConnectTimeout: 60000
+
+
+spring:
+  application:
+    name: atcrowdfunding-order
+  datasource:
+    url: jdbc:mysql://192.168.101.128:3306/atcrowdfunding?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 192.168.101.128
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 20
+        min-idle: 10
+
+server:
+  port: 9000
+
+crowdfunding-order:
+  auth-intercept-enable: true
+  swagger2-enable: true
+
+mybatis:
+  mapper-locations: classpath:mappers/*
+

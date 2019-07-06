@@ -1,0 +1,58 @@
+package com.atnanx.atcrowfunding.app.feign;
+
+import com.atnanx.atcrowdfunding.core.bean.TTag;
+import com.atnanx.atcrowdfunding.core.bean.TType;
+import com.atnanx.atcrowdfunding.core.common.ServerResponse;
+import com.atnanx.atcrowdfunding.core.vo.req.project.BaseVo;
+import com.atnanx.atcrowdfunding.core.vo.req.project.ProjectBaseInfoVo;
+import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllAllInfoVo;
+import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllInfoVo;
+import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectReturnDetailVo;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+
+@RequestMapping("/project")
+@FeignClient("ATCROWDFUNDING-PROJECT")
+public interface ProjectFeignService {
+
+
+    //初始化创建
+    @PostMapping("/create/init")
+    ServerResponse init(@RequestParam("accessToken") String accessToken,@RequestParam(value = "hasReadProtocol",defaultValue = "1") String hasReadProtocol);
+
+    //"获取项目系统标签信息"
+    @GetMapping("/sys/tags")
+    ServerResponse<List<TTag>> sysTags();
+
+    //"获取项目系统分类信息"
+    @GetMapping("/sys/type")
+    ServerResponse<List<TType>> sysType();
+
+    //保存众筹项目基本信息
+    @PostMapping("/create/savebaseinfo")
+    ServerResponse<String> saveBaseInfo(@RequestBody ProjectBaseInfoVo baseInfoVo);
+
+    //保存众筹项目回报信息
+    @PostMapping("/create/return")
+    ServerResponse<String> addReturn(@RequestBody List<ProjectReturnDetailVo> returns);
+
+    //保存众筹项目基本信息
+    @PostMapping("/create/submit")
+    ServerResponse<String> submit(@RequestBody BaseVo vo);
+
+    //
+    @GetMapping("/all/index")
+    ServerResponse<List<ProjectAllInfoVo>> getAllIndex();
+
+    //获取项目详细信息(封装的vo)
+    @GetMapping("/info/detail/{projectId}")
+    ServerResponse<ProjectAllAllInfoVo> getDetail(@PathVariable("projectId") Integer projectId);
+
+    //图片上传
+    @PostMapping("/create/upload_photo")
+    ServerResponse<List<String>> uploadPhoto(@RequestParam("file") MultipartFile[] file,
+                                                @RequestParam("accessToken") String accessToken);
+}

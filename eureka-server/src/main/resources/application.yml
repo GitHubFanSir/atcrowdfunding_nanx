@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: eureka-server #spring-cloud-eureka
+
+# \u6CE8\u518C\u4E2D\u5FC3\u5B9E\u4F8B\u4E3B\u673A
+# 注册中心实例主机
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      # \u4EE5\u540E\u670D\u52A1\u90FD\u6CE8\u518C\u5230\u9ED8\u8BA4\u7684\u533A\u57DF\u4E2D\uFF0C\u56E0\u4E3A\u53EA\u67091\u4E2A\u533A\u57DF\uFF0C
+      # 以后服务都注册到默认的区域中，因为只有1个区域，
+      # 原理，相同的服务建立集群可以发布到不同的区域，ip也不同，当访问该集群的服务时，注册中心自动匹配速度最近的区域的服务(一般最近最快)
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka # 设置以后所有的服务都注册到这个地址下
+    fetch-registry: false # 自己不从注册中心中获取什么服务数据
+    register-with-eureka: false # 注册中心自己不用注册进注册中心
+
+
+server:
+  port: 8761

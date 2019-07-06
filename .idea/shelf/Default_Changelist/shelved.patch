@@ -1,0 +1,39 @@
+Index: atcrowdfunding-order/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- atcrowdfunding-order/.gitignore	(date 1560737986393)
++++ atcrowdfunding-order/.gitignore	(date 1560737986393)
+@@ -0,0 +1,31 @@
++HELP.md
++target/
++!.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**
++!**/src/test/**
++
++### STS ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### IntelliJ IDEA ###
++.idea
++*.iws
++*.iml
++*.ipr
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++
++### VS Code ###
++.vscode/
