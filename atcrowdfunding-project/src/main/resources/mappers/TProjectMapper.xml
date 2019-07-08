@@ -77,7 +77,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, remark, money, day, status, deploydate, supportmoney, supporter, completion, 
+    id, name, remark, money, day, status, deploydate, supportmoney, supporter, completion,
     memberid, createdate, follower
   </sql>
   <select id="selectByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectExample" resultMap="BaseResultMap">
@@ -340,7 +340,7 @@
 
   <!-- List<ProjectAllInfoVo> getAllProjectsInfos();-->
   <select id="getAllProjectsInfos" resultType="com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllInfoVo">
-	  SELECT p.*,p_i.`imgurl`,`type`.name  FROM `t_project` p
+	  SELECT p.*,p_i.`imgurl`,`type`.name AS typeName,`type`.remark AS typeRemark  FROM `t_project` p
 		  LEFT JOIN `t_project_images` p_i ON p_i.`projectid`=p.`id`
 		  LEFT JOIN t_project_type p_t ON p_t.projectid=p.id
 		  LEFT JOIN t_type `type` ON p_t.typeid=type.id

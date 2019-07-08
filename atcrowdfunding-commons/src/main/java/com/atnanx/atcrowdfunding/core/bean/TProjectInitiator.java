@@ -3,6 +3,8 @@ package com.atnanx.atcrowdfunding.core.bean;
 public class TProjectInitiator {
     private Integer id;
 
+    private Integer projectid;
+
     //自我介绍
     private String selfintroduction;
     //详细的自我介绍
@@ -12,8 +14,9 @@ public class TProjectInitiator {
     //客服电话
     private String hotline;
 
-    public TProjectInitiator(Integer id, String selfintroduction, String detailselfintroduction, String telphone, String hotline) {
+    public TProjectInitiator(Integer id, Integer projectid, String selfintroduction, String detailselfintroduction, String telphone, String hotline) {
         this.id = id;
+        this.projectid = projectid;
         this.selfintroduction = selfintroduction;
         this.detailselfintroduction = detailselfintroduction;
         this.telphone = telphone;
@@ -30,6 +33,14 @@ public class TProjectInitiator {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getProjectid() {
+        return projectid;
+    }
+
+    public void setProjectid(Integer projectid) {
+        this.projectid = projectid;
     }
 
     public String getSelfintroduction() {

@@ -19,9 +19,9 @@ public class ProjectReturnConfirmPageVo {
     @Setter @Getter
     private String content;//回报的内容
     @Setter @Getter
-    private Integer num;//购买几个
+    private Integer num;//购买了几个回报
     @Setter @Getter
-    private Integer supportmoney;
+    private Integer supportmoney; //单个指定回报需要的金额
     @Setter @Getter
     private Integer freight;
 

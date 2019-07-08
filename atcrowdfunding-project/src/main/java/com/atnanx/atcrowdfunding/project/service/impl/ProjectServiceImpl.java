@@ -4,6 +4,7 @@ import com.atnanx.atcrowdfunding.core.bean.*;
 import com.atnanx.atcrowdfunding.core.common.ServerResponse;
 import com.atnanx.atcrowdfunding.core.constant.Const;
 import com.atnanx.atcrowdfunding.core.constant.state.ImgTypeEnum;
+import com.atnanx.atcrowdfunding.core.constant.state.ProjectFinancingSituationEnum;
 import com.atnanx.atcrowdfunding.core.constant.state.ProjectStatusEnum;
 import com.atnanx.atcrowdfunding.core.util.DateTimeUtil;
 import com.atnanx.atcrowdfunding.core.util.JsonUtil;
@@ -15,6 +16,7 @@ import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllInfoVo;
 import com.atnanx.atcrowdfunding.project.component.OssTemplate;
 import com.atnanx.atcrowdfunding.project.mapper.*;
 import com.atnanx.atcrowdfunding.project.service.IProjectService;
+import com.atnanx.atcrowdfunding.project.service.feign.MemberFeignService;
 import com.atnanx.atcrowdfunding.project.vo.ProjectRedisStorageVo;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -45,7 +47,6 @@ public class ProjectServiceImpl implements IProjectService {
     private TTagMapper tagMapper;
     @Autowired
     private TTypeMapper typeMapper;
-
     @Autowired
     private TProjectMapper projectMapper;
     @Autowired
@@ -54,11 +55,12 @@ public class ProjectServiceImpl implements IProjectService {
     private TProjectImagesMapper projectImagesMapper;
     @Autowired
     private TProjectInitiatorMapper projectInitiatorMapper;
-
     @Autowired
     private TProjectTagMapper projectTagMapper;
     @Autowired
     private TProjectTypeMapper projectTypeMapper;
+    @Autowired
+    private MemberFeignService memberFeignService;
 
     @Override
     public ServerResponse initProject(String accessToken) {
@@ -286,6 +288,7 @@ public class ProjectServiceImpl implements IProjectService {
         //保存项目发起人表
         TProjectInitiator projectInitiator = new TProjectInitiator();
         BeanUtils.copyProperties(projectRedisStorageVo, projectInitiator);
+        projectInitiator.setProjectid(project.getId());
         int projectInitiatorInsertCount = projectInitiatorMapper.insertSelective(projectInitiator);
         if (projectInitiatorInsertCount <= 0) {
             log.error("项目{},项目名:{}发起人表插入失败", project.getId(),project.getName());
@@ -339,6 +342,11 @@ public class ProjectServiceImpl implements IProjectService {
         ProjectAllAllInfoVo allInfoVo = new ProjectAllAllInfoVo();
         //1、查询项目的基本信息
         TProject project = projectMapper.selectByPrimaryKey(projectId);
+
+        TProjectInitiatorExample projectInitiatorExample = new TProjectInitiatorExample();
+        projectInitiatorExample.createCriteria().andProjectidEqualTo(projectId);
+        TProjectInitiator projectInitiator = projectInitiatorMapper.selectByExample(projectInitiatorExample).get(0);
+
         BeanUtils.copyProperties(project,allInfoVo);
 
         //2、查出头图地址
@@ -355,6 +363,17 @@ public class ProjectServiceImpl implements IProjectService {
         //4、查询项目的所有档位信息
         List<TReturn> returns = this.getProjectAllReturns(projectId);
         allInfoVo.setReturns(returns);
+        //5.设置项目初始化信息
+        allInfoVo.setProjectInitiator(projectInitiator);
+        //6. 设置项目当前筹款状态
+        allInfoVo.setStatusStr(ProjectFinancingSituationEnum.getProjectStatus(project.getStatus()));
+        //7. 设置发布人名
+        ServerResponse<String> response = memberFeignService.getMemberName(project.getMemberid());
+        if (response.isSuccess()){
+            allInfoVo.setMemberName(response.getData());
+        }else {
+            log.error(response.getMsg());
+        }
 
         return ServerResponse.createBySuccess("获取项目详情成功",allInfoVo);
     }

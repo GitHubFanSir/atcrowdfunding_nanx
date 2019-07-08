@@ -18,14 +18,15 @@ import com.atnanx.atcrowdfunding.core.util.DateTimeUtil;
 import com.atnanx.atcrowdfunding.core.util.JsonUtil;
 import com.atnanx.atcrowdfunding.core.vo.req.order.OrderCreateVo;
 import com.atnanx.atcrowdfunding.core.vo.req.order.OrderListVo;
+import com.atnanx.atcrowdfunding.core.vo.req.pay.PayVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectReturnDetailVo;
 import com.atnanx.atcrowdfunding.order.component.AlipayConfig;
 import com.atnanx.atcrowdfunding.order.mapper.TOrderMapper;
 import com.atnanx.atcrowdfunding.order.service.IOrderService;
 import com.atnanx.atcrowdfunding.order.service.feign.ProjectFeignService;
-import com.atnanx.atcrowdfunding.core.vo.req.pay.PayVo;
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -53,7 +54,7 @@ public class OrderServiceImpl implements IOrderService {
     @Override
 //    @Transactional  事务会因为，网络远程调用超时会拉长本地数据库事务时间，导致事务一直锁住数据库的字段，
     //需要分布式事务解决
-    public ServerResponse generateOrder(OrderCreateVo orderCreateVo) {
+    public ServerResponse<TOrder> generateOrder(OrderCreateVo orderCreateVo) {
         String memberStr = stringRedisTemplate.opsForValue().get(Const.memberInfo.REDIS_LOGIN_MEMBER_PREFIX + orderCreateVo.getAccessToken());
         TMember member = JsonUtil.Json2Obj(memberStr, TMember.class);
 
@@ -90,7 +91,7 @@ public class OrderServiceImpl implements IOrderService {
         }
     }
 
-//    @Override
+    @Override
     public void updateOrder(String out_trade_no, OrderStatusEnum payed) {
         TOrder order = new TOrder();
         order.setStatus(String.valueOf(payed.getCode()));
@@ -99,13 +100,16 @@ public class OrderServiceImpl implements IOrderService {
         orderMapper.updateByExampleSelective(order,example);
     }
 
-//    @Override
-    public List<OrderListVo> orderList(String accessToken) {
+    @Override
+    public ServerResponse<List<OrderListVo>> orderList(String accessToken) {
         String memberStr = stringRedisTemplate.opsForValue().get(Const.memberInfo.REDIS_LOGIN_MEMBER_PREFIX + accessToken);
         TMember member = JsonUtil.Json2Obj(memberStr,TMember.class);
 
         //1、查出最新的五个订单信息；
         List<TOrder> orders = orderMapper.selectLimit5Order(member.getId());
+        if (CollectionUtils.isEmpty(orders)){
+            ServerResponse.createByErrorMessage("查询订单失败");
+        }
         //2、查出每个订单的项目信息
         List<OrderListVo> orderListVos = new ArrayList<>();
 
@@ -118,7 +122,7 @@ public class OrderServiceImpl implements IOrderService {
             orderListVos.add(vo);
         }
 
-        return orderListVos;
+        return ServerResponse.createBySuccess(orderListVos);
     }
 
     @Override
@@ -164,6 +168,10 @@ public class OrderServiceImpl implements IOrderService {
         String body = new StringBuilder().append(productReturnDetail.getContent()).append("售卖").append(order.getRtncount()).append("份,共").append(total_amount).append("元").toString();
         // 支付超时，定义为120分钟
         String timeoutExpress = "120m";
+        // 卖家支付宝账号ID，用于支持一个签约账号下支持打款到不同的收款账号，(打款到sellerId对应的支付宝账号)
+        // 如果该字段为空，则默认为与支付宝签约的商户的PID，也就是appid对应的PID uid
+        String sellerId = alipayConfig.getSellerId();
+
 
         List<GoodsDetail> goodsDetailList = Lists.newArrayList();
         GoodsDetail goodsDetail = new GoodsDetail();

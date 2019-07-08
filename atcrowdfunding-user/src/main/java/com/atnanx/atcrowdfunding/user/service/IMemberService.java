@@ -1,5 +1,6 @@
 package com.atnanx.atcrowdfunding.user.service;
 
+import com.atnanx.atcrowdfunding.core.bean.TMemberAddress;
 import com.atnanx.atcrowdfunding.core.common.ServerResponse;
 import com.atnanx.atcrowdfunding.core.vo.req.member.MemberRegisterReqVo;
 
@@ -49,4 +50,7 @@ public interface IMemberService {
      */
     ServerResponse sendSms(String mobile, String type);
 
+    ServerResponse getMemberAddress(Integer id);
+
+    ServerResponse<TMemberAddress> addAddress(String accessToken, String address);
 }

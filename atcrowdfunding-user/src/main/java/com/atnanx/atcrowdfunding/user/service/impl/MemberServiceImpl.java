@@ -1,8 +1,6 @@
 package com.atnanx.atcrowdfunding.user.service.impl;
 
-import com.atnanx.atcrowdfunding.core.bean.TMember;
-import com.atnanx.atcrowdfunding.core.bean.TMemberExample;
-import com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCode;
+import com.atnanx.atcrowdfunding.core.bean.*;
 import com.atnanx.atcrowdfunding.core.common.ResponseCode;
 import com.atnanx.atcrowdfunding.core.common.ServerResponse;
 import com.atnanx.atcrowdfunding.core.constant.Const;
@@ -16,10 +14,12 @@ import com.atnanx.atcrowdfunding.core.util.RandomDataUtil;
 import com.atnanx.atcrowdfunding.core.vo.req.member.MemberRegisterReqVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.member.MemberLoginRespVo;
 import com.atnanx.atcrowdfunding.user.component.AliSmsTemplate;
+import com.atnanx.atcrowdfunding.user.mapper.TMemberAddressMapper;
 import com.atnanx.atcrowdfunding.user.mapper.TMemberMapper;
 import com.atnanx.atcrowdfunding.user.mapper.TMemberPhoneCodeMapper;
 import com.atnanx.atcrowdfunding.user.service.IMemberService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +43,8 @@ public class MemberServiceImpl implements IMemberService {
 
     @Autowired
     private TMemberPhoneCodeMapper memberPhoneCodeMapper;
+    @Autowired
+    private TMemberAddressMapper memberAddressMapper;
 
     @Autowired
     StringRedisTemplate stringRedisTemplate;
@@ -187,7 +189,6 @@ public class MemberServiceImpl implements IMemberService {
         String loginToken = UUID.randomUUID().toString().replace("-", "");
         MemberLoginRespVo memberLoginVo = assemMemberLoginVo(member,loginToken);
 
-        //不知道这个有什么意义
 
         return ServerResponse.createBySuccess("获取用户信息成功",memberLoginVo);
     }
@@ -253,6 +254,33 @@ public class MemberServiceImpl implements IMemberService {
         }
 
         return ServerResponse.createBySuccess("发送短信成功",phoneCode);
+    }
+
+    @Override
+    public ServerResponse getMemberAddress(Integer memberId) {
+        TMemberAddressExample example = new TMemberAddressExample();
+        example.createCriteria().andMemberidEqualTo(memberId);
+        List<TMemberAddress> memberAddresseList = memberAddressMapper.selectByExample(example);
+        if (CollectionUtils.isEmpty(memberAddresseList)){
+            ServerResponse.createByErrorMessage("查询用户收货地址失败");
+        }
+        return ServerResponse.createBySuccess("查询用户收货地址成功",memberAddresseList);
+    }
+
+    @Override
+    public ServerResponse<TMemberAddress> addAddress(String accessToken, String address) {
+        TMemberAddress memberAddress = new TMemberAddress();
+
+        String memberStr = stringRedisTemplate.opsForValue().get(Const.memberInfo.REDIS_LOGIN_MEMBER_PREFIX+ accessToken);
+        TMember member = JsonUtil.Json2Obj(memberStr, TMember.class);
+
+        memberAddress.setAddress(address);
+        memberAddress.setMemberid(member.getId());
+        int insertCount = memberAddressMapper.insertSelective(memberAddress);
+        if (insertCount<0){
+            return ServerResponse.createByErrorMessage("插入收货地址失败");
+        }
+        return ServerResponse.createBySuccess("插入收货地址成功",memberAddress);
     }
 
     public TMemberPhoneCode assemMemberPhoneCode(String phoneCode,String phone,String type){

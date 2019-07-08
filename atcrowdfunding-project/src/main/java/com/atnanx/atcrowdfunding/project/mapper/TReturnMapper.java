@@ -29,7 +29,7 @@ public interface TReturnMapper {
 
     int updateByPrimaryKey(TReturn record);
 
-    int reduceProjectReturnStock(@Param("rtnCount") Integer rtnCount, @Param("returnId")Integer returnId);
+    int reduceProjectReturnStock(@Param("rtnCount") Integer rtnCount, @Param("returnId") Integer returnId);
 
     int selectCountById(Integer returnId);
 }

@@ -604,6 +604,126 @@ public class TReturnExample {
             return (Criteria) this;
         }
 
+        public Criteria andSupporterIsNull() {
+            addCriterion("supporter is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterIsNotNull() {
+            addCriterion("supporter is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterEqualTo(Integer value) {
+            addCriterion("supporter =", value, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterNotEqualTo(Integer value) {
+            addCriterion("supporter <>", value, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterGreaterThan(Integer value) {
+            addCriterion("supporter >", value, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterGreaterThanOrEqualTo(Integer value) {
+            addCriterion("supporter >=", value, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterLessThan(Integer value) {
+            addCriterion("supporter <", value, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterLessThanOrEqualTo(Integer value) {
+            addCriterion("supporter <=", value, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterIn(List<Integer> values) {
+            addCriterion("supporter in", values, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterNotIn(List<Integer> values) {
+            addCriterion("supporter not in", values, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterBetween(Integer value1, Integer value2) {
+            addCriterion("supporter between", value1, value2, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSupporterNotBetween(Integer value1, Integer value2) {
+            addCriterion("supporter not between", value1, value2, "supporter");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesIsNull() {
+            addCriterion("sales is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesIsNotNull() {
+            addCriterion("sales is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesEqualTo(Integer value) {
+            addCriterion("sales =", value, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesNotEqualTo(Integer value) {
+            addCriterion("sales <>", value, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesGreaterThan(Integer value) {
+            addCriterion("sales >", value, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesGreaterThanOrEqualTo(Integer value) {
+            addCriterion("sales >=", value, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesLessThan(Integer value) {
+            addCriterion("sales <", value, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesLessThanOrEqualTo(Integer value) {
+            addCriterion("sales <=", value, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesIn(List<Integer> values) {
+            addCriterion("sales in", values, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesNotIn(List<Integer> values) {
+            addCriterion("sales not in", values, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesBetween(Integer value1, Integer value2) {
+            addCriterion("sales between", value1, value2, "sales");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalesNotBetween(Integer value1, Integer value2) {
+            addCriterion("sales not between", value1, value2, "sales");
+            return (Criteria) this;
+        }
+
         public Criteria andFreightIsNull() {
             addCriterion("freight is null");
             return (Criteria) this;

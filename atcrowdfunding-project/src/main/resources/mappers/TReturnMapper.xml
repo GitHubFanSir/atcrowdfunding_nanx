@@ -11,6 +11,8 @@
       <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="signalpurchase" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="purchase" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="supporter" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="sales" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="freight" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="invoice" javaType="java.lang.String" jdbcType="CHAR" />
       <arg column="rtndate" javaType="java.lang.Integer" jdbcType="INTEGER" />
@@ -75,8 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, projectid, type, supportmoney, content, count, signalpurchase, purchase, freight, 
-    invoice, rtndate
+    id, projectid, type, supportmoney, content, count, signalpurchase, purchase, supporter, 
+    sales, freight, invoice, rtndate
   </sql>
   <select id="selectByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TReturnExample" resultMap="BaseResultMap">
     select
@@ -111,12 +113,14 @@
   <insert id="insert" parameterType="com.atnanx.atcrowdfunding.core.bean.TReturn">
     insert into t_return (id, projectid, type, 
       supportmoney, content, count, 
-      signalpurchase, purchase, freight, 
-      invoice, rtndate)
+      signalpurchase, purchase, supporter, 
+      sales, freight, invoice, 
+      rtndate)
     values (#{id,jdbcType=INTEGER}, #{projectid,jdbcType=INTEGER}, #{type,jdbcType=CHAR}, 
       #{supportmoney,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, 
-      #{signalpurchase,jdbcType=INTEGER}, #{purchase,jdbcType=INTEGER}, #{freight,jdbcType=INTEGER}, 
-      #{invoice,jdbcType=CHAR}, #{rtndate,jdbcType=INTEGER})
+      #{signalpurchase,jdbcType=INTEGER}, #{purchase,jdbcType=INTEGER}, #{supporter,jdbcType=INTEGER}, 
+      #{sales,jdbcType=INTEGER}, #{freight,jdbcType=INTEGER}, #{invoice,jdbcType=CHAR}, 
+      #{rtndate,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.atnanx.atcrowdfunding.core.bean.TReturn">
     insert into t_return
@@ -144,6 +148,12 @@
       </if>
       <if test="purchase != null">
         purchase,
+      </if>
+      <if test="supporter != null">
+        supporter,
+      </if>
+      <if test="sales != null">
+        sales,
       </if>
       <if test="freight != null">
         freight,
@@ -179,6 +189,12 @@
       </if>
       <if test="purchase != null">
         #{purchase,jdbcType=INTEGER},
+      </if>
+      <if test="supporter != null">
+        #{supporter,jdbcType=INTEGER},
+      </if>
+      <if test="sales != null">
+        #{sales,jdbcType=INTEGER},
       </if>
       <if test="freight != null">
         #{freight,jdbcType=INTEGER},
@@ -224,6 +240,12 @@
       <if test="record.purchase != null">
         purchase = #{record.purchase,jdbcType=INTEGER},
       </if>
+      <if test="record.supporter != null">
+        supporter = #{record.supporter,jdbcType=INTEGER},
+      </if>
+      <if test="record.sales != null">
+        sales = #{record.sales,jdbcType=INTEGER},
+      </if>
       <if test="record.freight != null">
         freight = #{record.freight,jdbcType=INTEGER},
       </if>
@@ -248,6 +270,8 @@
       count = #{record.count,jdbcType=INTEGER},
       signalpurchase = #{record.signalpurchase,jdbcType=INTEGER},
       purchase = #{record.purchase,jdbcType=INTEGER},
+      supporter = #{record.supporter,jdbcType=INTEGER},
+      sales = #{record.sales,jdbcType=INTEGER},
       freight = #{record.freight,jdbcType=INTEGER},
       invoice = #{record.invoice,jdbcType=CHAR},
       rtndate = #{record.rtndate,jdbcType=INTEGER}
@@ -279,6 +303,12 @@
       <if test="purchase != null">
         purchase = #{purchase,jdbcType=INTEGER},
       </if>
+      <if test="supporter != null">
+        supporter = #{supporter,jdbcType=INTEGER},
+      </if>
+      <if test="sales != null">
+        sales = #{sales,jdbcType=INTEGER},
+      </if>
       <if test="freight != null">
         freight = #{freight,jdbcType=INTEGER},
       </if>
@@ -300,6 +330,8 @@
       count = #{count,jdbcType=INTEGER},
       signalpurchase = #{signalpurchase,jdbcType=INTEGER},
       purchase = #{purchase,jdbcType=INTEGER},
+      supporter = #{supporter,jdbcType=INTEGER},
+      sales = #{sales,jdbcType=INTEGER},
       freight = #{freight,jdbcType=INTEGER},
       invoice = #{invoice,jdbcType=CHAR},
       rtndate = #{rtndate,jdbcType=INTEGER}

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.atnanx.atcrowdfunding.project.mapper.TProjectInitiatorMapper">
-  <resultMap id="BaseResultMap" type="com.atnanx.atcrowdfunding.core.bean.TProjectInitiator">
+<mapper namespace="com.atnanx.atcrowdfunding.project.mapper.TMemberPhoneCodeMapper">
+  <resultMap id="BaseResultMap" type="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCode">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="projectid" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="selfintroduction" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="detailselfintroduction" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="telphone" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="hotline" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="phone" javaType="java.lang.String" jdbcType="CHAR" />
+      <arg column="code" javaType="java.lang.String" jdbcType="CHAR" />
+      <arg column="type" javaType="java.lang.String" jdbcType="CHAR" />
+      <arg column="gmt_create" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="gmt_update" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -70,15 +70,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id,projectid, selfintroduction, detailselfintroduction, telphone, hotline
+    id, phone, code, type, gmt_create, gmt_update
   </sql>
-  <select id="selectByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiatorExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCodeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from t_project_initiator
+    from t_member_phone_code
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -89,94 +89,94 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from t_project_initiator
+    from t_member_phone_code
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from t_project_initiator
+    delete from t_member_phone_code
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiatorExample">
-    delete from t_project_initiator
+  <delete id="deleteByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCodeExample">
+    delete from t_member_phone_code
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiator">
-    insert into t_project_initiator (id, projectid,selfintroduction, detailselfintroduction,
-      telphone, hotline)
-    values (#{id,jdbcType=INTEGER},#{projectid,jdbcType=INTEGER}, #{selfintroduction,jdbcType=VARCHAR}, #{detailselfintroduction,jdbcType=VARCHAR},
-      #{telphone,jdbcType=VARCHAR}, #{hotline,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCode">
+    insert into t_member_phone_code (id, phone, code, type, 
+      gmt_create, gmt_update)
+    values (#{id,jdbcType=INTEGER}, #{phone,jdbcType=CHAR}, #{code,jdbcType=CHAR}, #{type,jdbcType=CHAR}, 
+      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtUpdate,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiator">
-    insert into t_project_initiator
+  <insert id="insertSelective" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCode">
+    insert into t_member_phone_code
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
       </if>
-      <if test="projectid != null">
-        projectid,
+      <if test="phone != null">
+        phone,
       </if>
-      <if test="selfintroduction != null">
-        selfintroduction,
+      <if test="code != null">
+        code,
       </if>
-      <if test="detailselfintroduction != null">
-        detailselfintroduction,
+      <if test="type != null">
+        type,
       </if>
-      <if test="telphone != null">
-        telphone,
+      <if test="gmtCreate != null">
+        gmt_create,
       </if>
-      <if test="hotline != null">
-        hotline,
+      <if test="gmtUpdate != null">
+        gmt_update,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="projectid != null">
-        #{projectid,jdbcType=INTEGER},
+      <if test="phone != null">
+        #{phone,jdbcType=CHAR},
       </if>
-      <if test="selfintroduction != null">
-        #{selfintroduction,jdbcType=VARCHAR},
+      <if test="code != null">
+        #{code,jdbcType=CHAR},
       </if>
-      <if test="detailselfintroduction != null">
-        #{detailselfintroduction,jdbcType=VARCHAR},
+      <if test="type != null">
+        #{type,jdbcType=CHAR},
       </if>
-      <if test="telphone != null">
-        #{telphone,jdbcType=VARCHAR},
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
       </if>
-      <if test="hotline != null">
-        #{hotline,jdbcType=VARCHAR},
+      <if test="gmtUpdate != null">
+        #{gmtUpdate,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiatorExample" resultType="java.lang.Long">
-    select count(*) from t_project_initiator
+  <select id="countByExample" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCodeExample" resultType="java.lang.Long">
+    select count(*) from t_member_phone_code
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update t_project_initiator
+    update t_member_phone_code
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.projectid != null">
-        id = #{record.projectid,jdbcType=INTEGER},
+      <if test="record.phone != null">
+        phone = #{record.phone,jdbcType=CHAR},
       </if>
-      <if test="record.selfintroduction != null">
-        selfintroduction = #{record.selfintroduction,jdbcType=VARCHAR},
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=CHAR},
       </if>
-      <if test="record.detailselfintroduction != null">
-        detailselfintroduction = #{record.detailselfintroduction,jdbcType=VARCHAR},
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=CHAR},
       </if>
-      <if test="record.telphone != null">
-        telphone = #{record.telphone,jdbcType=VARCHAR},
+      <if test="record.gmtCreate != null">
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.hotline != null">
-        hotline = #{record.hotline,jdbcType=VARCHAR},
+      <if test="record.gmtUpdate != null">
+        gmt_update = #{record.gmtUpdate,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null">
@@ -184,45 +184,45 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update t_project_initiator
+    update t_member_phone_code
     set id = #{record.id,jdbcType=INTEGER},
-      projectid = #{record.projectid,jdbcType=INTEGER},
-      selfintroduction = #{record.selfintroduction,jdbcType=VARCHAR},
-      detailselfintroduction = #{record.detailselfintroduction,jdbcType=VARCHAR},
-      telphone = #{record.telphone,jdbcType=VARCHAR},
-      hotline = #{record.hotline,jdbcType=VARCHAR}
+      phone = #{record.phone,jdbcType=CHAR},
+      code = #{record.code,jdbcType=CHAR},
+      type = #{record.type,jdbcType=CHAR},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      gmt_update = #{record.gmtUpdate,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiator">
-    update t_project_initiator
+  <update id="updateByPrimaryKeySelective" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCode">
+    update t_member_phone_code
     <set>
-      <if test="projectid != null">
-        projectid = #{projectid,jdbcType=INTEGER},
+      <if test="phone != null">
+        phone = #{phone,jdbcType=CHAR},
       </if>
-      <if test="selfintroduction != null">
-        selfintroduction = #{selfintroduction,jdbcType=VARCHAR},
+      <if test="code != null">
+        code = #{code,jdbcType=CHAR},
       </if>
-      <if test="detailselfintroduction != null">
-        detailselfintroduction = #{detailselfintroduction,jdbcType=VARCHAR},
+      <if test="type != null">
+        type = #{type,jdbcType=CHAR},
       </if>
-      <if test="telphone != null">
-        telphone = #{telphone,jdbcType=VARCHAR},
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       </if>
-      <if test="hotline != null">
-        hotline = #{hotline,jdbcType=VARCHAR},
+      <if test="gmtUpdate != null">
+        gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.atnanx.atcrowdfunding.core.bean.TProjectInitiator">
-    update t_project_initiator
-    set projectid = #{projectid,jdbcType=INTEGER},
-    selfintroduction = #{selfintroduction,jdbcType=VARCHAR},
-      detailselfintroduction = #{detailselfintroduction,jdbcType=VARCHAR},
-      telphone = #{telphone,jdbcType=VARCHAR},
-      hotline = #{hotline,jdbcType=VARCHAR}
+  <update id="updateByPrimaryKey" parameterType="com.atnanx.atcrowdfunding.core.bean.TMemberPhoneCode">
+    update t_member_phone_code
+    set phone = #{phone,jdbcType=CHAR},
+      code = #{code,jdbcType=CHAR},
+      type = #{type,jdbcType=CHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

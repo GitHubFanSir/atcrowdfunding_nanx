@@ -35,7 +35,7 @@ public class AppMvcConfig implements WebMvcConfigurer {
                 }-->
     <mvc:view-controller path="/login.html" view-name="login"/>*/
         //发送了/login.html,视图解析拼串来到指定地址  templates/login.html
-        registry.addViewController("/login.html").setViewName("member/login");
+
         registry.addViewController("/reg.html").setViewName("member/reg");
         registry.addViewController("/index.html").setViewName("index");
 

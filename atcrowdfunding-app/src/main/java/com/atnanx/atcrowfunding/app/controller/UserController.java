@@ -6,52 +6,70 @@ import com.atnanx.atcrowdfunding.core.constant.Const;
 import com.atnanx.atcrowdfunding.core.vo.req.member.MemberRegisterReqVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.member.MemberLoginRespVo;
 import com.atnanx.atcrowfunding.app.feign.UserServiceFeign;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/user")
+//@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     UserServiceFeign userService;
-    @PostMapping("/login")
-    public String doLogin(String loginacct, String password, HttpSession session, Model model, RedirectAttributes redirectAttributes){
+
+    //      registry.addViewController("/login.html").setViewName("member/login");
+    @GetMapping("/login.html")
+    public String loginPage(HttpSession session,HttpServletRequest request) {
+        MemberLoginRespVo frontMember = (MemberLoginRespVo) session.getAttribute(Const.FRONT_SESSION_LOGIN_MEMBER);
+        if (frontMember!=null){
+            return  "redirect:/index.html";
+        }
+        return "member/login";
+    }
+
+    @PostMapping("/user/login")
+    public String doLogin(String loginacct, String password, HttpSession session,
+                          Model model, HttpServletRequest request) {
 
         ServerResponse<MemberLoginRespVo> response = userService.loginByPwd(loginacct, password);
-        if(response.isSuccess()){
+        if (response.isSuccess()) {
             //登录成功
             MemberLoginRespVo data = response.getData();
 
-            session.setAttribute(Const.FRONT_SESSION_LOGIN_MEMBER,data);
+            session.setAttribute(Const.FRONT_SESSION_LOGIN_MEMBER, data);
+
+            String referer = (String) session.getAttribute("referer");
+            if (StringUtils.isNotBlank(referer)){
+                return "redirect:" + referer;
+            }
 
             //回到首页
-            return "redirect:/index.html";
-        }else {
+            return "redirect:/index.html" ;
+        } else {
 
-            model.addAttribute("msg",response.getMsg());
-            model.addAttribute("loginacct",loginacct);
+            model.addAttribute("msg", response.getMsg());
+            model.addAttribute("loginacct", loginacct);
             //回到登录页
-            return "login";
+            return "member/login";
         }
-
 
     }
 
-    @GetMapping("/logout")
-    public String logout(HttpSession session){
+    @GetMapping("/user/logout")
+    public String logout(HttpSession session) {
         session.invalidate();
         return "redirect:/index.html";
     }
 
     //重定向携带数据；RedirectAttributes redirectAttributes
-    @PostMapping("/reg")
-    public String registe(MemberRegisterReqVo vo, RedirectAttributes redirectAttributes){
+    @PostMapping("/user/reg")
+    public String registe(MemberRegisterReqVo vo, RedirectAttributes redirectAttributes) {
 
         //cloud会把vo转为json，导致远程没有写@RequestBody的服务就将json转不成对象，
         /**
@@ -65,16 +83,16 @@ public class UserController {
          *
          */
         ServerResponse<String> register = userService.register(vo);
-        if(register.isSuccess()){
+        if (register.isSuccess()) {
             //注册成功 //成去登录页面；
             //提示注册成功可以登录
-            redirectAttributes.addFlashAttribute("msg","注册成功可以登录了");
+            redirectAttributes.addFlashAttribute("msg", "注册成功可以登录了");
 
             //解决表单重复提交；最简单暴力的方式就是重定向；
             return "redirect:/login.html";
-        }else {
-            redirectAttributes.addFlashAttribute("msg",register.getMsg());
-            redirectAttributes.addFlashAttribute("vo",vo);
+        } else {
+            redirectAttributes.addFlashAttribute("msg", register.getMsg());
+            redirectAttributes.addFlashAttribute("vo", vo);
             return "redirect:/reg.html";
         }
 
@@ -82,8 +100,8 @@ public class UserController {
     }
 
     @ResponseBody
-    @PostMapping("/address")
-    public ServerResponse<TMemberAddress> addAddress(@RequestParam("address") String address, HttpSession session){
+    @PostMapping("/user/address")
+    public ServerResponse<TMemberAddress> addAddress(@RequestParam("address") String address, HttpSession session) {
         MemberLoginRespVo loginUser = (MemberLoginRespVo) session.getAttribute("loginUser");
         ServerResponse<TMemberAddress> response = userService.addUserAddress(loginUser.getAccessToken(), address);
         return response;

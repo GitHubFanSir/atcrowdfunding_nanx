@@ -9423,7 +9423,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            matrix.rotate(m, m, rotation);
 	        }
 	        if (origin) {
-	            // Translate back from origin
+	            // Translate mappers from origin
 	            m[4] += origin[0];
 	            m[5] += origin[1];
 	        }
@@ -16294,7 +16294,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                p[1] = data[i++];
 
 	                v2ApplyTransform(p, p, m);
-	                // Write back
+	                // Write mappers
 	                data[j++] = p[0];
 	                data[j++] = p[1];
 	            }
@@ -20406,7 +20406,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // FIXME
 	            // Note: MS Gesture require CSS touch-action set. But touch-action is not reliable,
 	            // which does not prevent defuault behavior occasionally (which may cause view port
-	            // zoomed in but use can not zoom it back). And event.preventDefault() does not work.
+	            // zoomed in but use can not zoom it mappers). And event.preventDefault() does not work.
 	            // So we have to not to use MSGesture and not to support touchmove and pinch on MS
 	            // touch screen. And we only support click behavior on MS touch screen now.
 
@@ -20682,7 +20682,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            ctx.beginPath();
 	            clipPath.buildPath(ctx, clipPath.shape);
 	            ctx.clip();
-	            // Transform back
+	            // Transform mappers
 	            clipPath.restoreTransform(ctx);
 	        }
 	    }
@@ -21144,7 +21144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                && el.style.opacity !== 0
 	                // Ignore scale 0 element, in some environment like node-canvas
 	                // Draw a scale 0 element can cause all following draw wrong
-	                // And setTransform with scale 0 will cause set back transform failed.
+	                // And setTransform with scale 0 will cause set mappers transform failed.
 	                && !(m && !m[0] && !m[3])
 	                // Ignore culled element
 	                && !(el.culling && isDisplayableCulled(el, this._width, this._height))
@@ -21805,7 +21805,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        createBackBuffer: function () {
 	            var dpr = this.dpr;
 
-	            this.domBack = createDom('back-' + this.id, 'canvas', this.painter, dpr);
+	            this.domBack = createDom('mappers-' + this.id, 'canvas', this.painter, dpr);
 	            this.ctxBack = this.domBack.getContext('2d');
 
 	            if (dpr != 1) {
@@ -26860,7 +26860,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    }, seriesModel);
 	                }
 
-	                // Add back
+	                // Add mappers
 	                group.add(symbolEl);
 
 	                data.setItemGraphicEl(newIdx, symbolEl);
@@ -28246,7 +28246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        ecModel.eachComponent('yAxis', createAxisCreator('y'), this);
 
 	        if (!axesCount.x || !axesCount.y) {
-	            // Roll back when there no either x or y axis
+	            // Roll mappers when there no either x or y axis
 	            this._axesMap = {};
 	            this._axesList = [];
 	            return;
@@ -30874,7 +30874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    }
 
 	                    data.setItemGraphicEl(newIndex, el);
-	                    // Add back
+	                    // Add mappers
 	                    group.add(el);
 
 	                    updateStyle(el, data, newIndex, itemModel, layout, seriesModel, isHorizontal);
@@ -32763,7 +32763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	        });
 
-	        // Add back
+	        // Add mappers
 	        this.group.add(symbolEl);
 	    };
 
@@ -41273,7 +41273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            !this._layouting
 	                                && this._startForceLayoutIteration(forceLayout, layoutAnimation);
 	                            forceLayout.setFixed(idx);
-	                            // Write position back to layout
+	                            // Write position mappers to layout
 	                            data.setItemLayout(idx, el.position);
 	                        }
 	                    }, this).on('dragend', function () {
@@ -42191,7 +42191,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    pts[1][1] = tmp0[1];
 	                    pts[2][1] = tmp0[2];
 	                }
-	                // Copy back to layout
+	                // Copy mappers to layout
 	                vec2.copy(linePoints[0], pts[0]);
 	                vec2.copy(linePoints[1], pts[2]);
 	                vec2.copy(linePoints[2], pts[1]);
@@ -42695,7 +42695,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                forceInstance.step = function (cb) {
 	                    for (var i = 0, l = nodes.length; i < l; i++) {
 	                        if (nodes[i].fixed) {
-	                            // Write back to layout instance
+	                            // Write mappers to layout instance
 	                            vec2.copy(nodes[i].p, graph.getNodeByIndex(i).getLayout());
 	                        }
 	                    }
@@ -47631,7 +47631,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                y0 = node.getLayout().y + node.getLayout().dy + nodeGap;
 	            }
 
-	            // if the bottommost node goes outside the bounds, push it back up
+	            // if the bottommost node goes outside the bounds, push it mappers up
 	            dy = y0 - nodeGap - height;
 	            if (dy > 0) {
 	                var nodeY = node.getLayout().y - dy;
@@ -48344,7 +48344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    symbolEl.updateData(data, newIdx);
 	                }
 
-	                // Add back
+	                // Add mappers
 	                group.add(symbolEl);
 
 	                data.setItemGraphicEl(newIdx, symbolEl);
@@ -50209,7 +50209,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	        });
 
-	        // Add back
+	        // Add mappers
 	        this.group.add(lineEl);
 	    };
 
@@ -50402,7 +50402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    break;
 	                }
 	            }
-	            if (i === len) { // Not found, back interation
+	            if (i === len) { // Not found, mappers interation
 	                for (var i = lastIndex - 1; i >= 0; i--) {
 	                    var interval = pieceList[i].interval;
 	                    if (interval[0] <= val && val <= interval[1]) {
@@ -50974,7 +50974,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	                    data.setItemGraphicEl(newIndex, bar);
 	                    bar.__pictorialSymbolMeta = symbolMeta;
-	                    // Add back
+	                    // Add mappers
 	                    group.add(bar);
 
 	                    updateCommon(bar, opt, symbolMeta);
@@ -63405,7 +63405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    height: coordRect.height
 	                };
 
-	            // Do not write back to option and replace value 'ph', because
+	            // Do not write mappers to option and replace value 'ph', because
 	            // the 'ph' value should be recalculated when resize.
 	            var layoutParams = layout.getLayoutParams(dataZoomModel.option);
 

@@ -1,6 +1,7 @@
 package com.atnanx.atcrowfunding.app.controller;
 
 import com.atnanx.atcrowdfunding.core.bean.TReturn;
+import com.atnanx.atcrowdfunding.core.bean.TType;
 import com.atnanx.atcrowdfunding.core.common.ServerResponse;
 import com.atnanx.atcrowdfunding.core.vo.req.order.OrderListVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.member.MemberLoginRespVo;
@@ -82,9 +83,15 @@ public class PageController {
         //调用远程服务查出所有项目
        //AppResponse<List<TProject>> index = projectFeignService.getAllIndex();
        // projectFeignService
+        //这边查出所有的压力好大啊
         ServerResponse<List<ProjectAllInfoVo>> allIndex = projectFeignService.getAllIndex();
+        List<ProjectAllInfoVo> projectAllInfoVoList = allIndex.getData();
 
-        model.addAttribute("projects",allIndex.getData());
+        ServerResponse<List<TType>> typeResponse = projectFeignService.sysType();
+        List<TType> typeList = typeResponse.getData();
+        //hashmap
+        model.addAttribute("projects",projectAllInfoVoList);
+        model.addAttribute("types",typeList);
         return "index";
     }
 }

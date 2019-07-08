@@ -31,13 +31,10 @@ public class TProject {
     private Integer supporter;
     //完成度
     private Integer completion;
+
+    private Integer memberid;
     //创建日期
     private String createdate;
     //关注者数量
     private Integer follower;
-
-    private Integer memberid;
-
-
-
 }

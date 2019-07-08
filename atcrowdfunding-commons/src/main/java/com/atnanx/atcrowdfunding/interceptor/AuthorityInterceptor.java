@@ -13,6 +13,7 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
+import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -54,13 +55,24 @@ public class AuthorityInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("preHandle");
         //请求中Controller中的方法名
-        HandlerMethod handlerMethod = (HandlerMethod) handler;
+        String methodName="";
+        String clazzName="";
+
+        if (handler instanceof HandlerMethod){
+            HandlerMethod handlerMethod = (HandlerMethod) handler;
+            methodName = handlerMethod.getMethod().getName();
+            clazzName = handlerMethod.getBean().getClass().getSimpleName();
+        } else if (handler instanceof ResourceHttpRequestHandler){
+            ResourceHttpRequestHandler handlerMethod = (ResourceHttpRequestHandler) handler;
+            methodName = "静态资源";
+            clazzName = "静态资源";
+        }
+
         //获取请求的uri
         String requestURI = request.getRequestURI();
 
         //解析HandlerMethod
-        String methodName = handlerMethod.getMethod().getName();
-        String clazzName = handlerMethod.getBean().getClass().getSimpleName();
+
 
         //https://www.cnblogs.com/ooo0/p/7741651.html
         // indexof 也可
@@ -138,7 +150,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
         MemberLoginRespVo frontMember = (MemberLoginRespVo) session.getAttribute(Const.FRONT_SESSION_LOGIN_MEMBER);
 
         //是admin的后台请求，且没有管理员权限 &&(isProjectRequest||isOrderRequest)
-        if (("back".equals(frontOrBack)&&member==null)){
+        if (("mappers".equals(frontOrBack)&&member==null)){
             //将response托管到拦截器中，需要对这些属性进行重新设置
             //返回false.即不会调用controller里的方法
             response.reset();//hyjnote 这里要添加reset，否则报异常 getWriter() has already been called for this response.
@@ -154,6 +166,13 @@ public class AuthorityInterceptor implements HandlerInterceptor {
         } else if(("front".equals(frontOrBack)&&frontMember==null)){
             RedirectAttributesModelMap redirectAttributes = new RedirectAttributesModelMap();
             redirectAttributes.addFlashAttribute("msg","请先登录");
+//            getHeader("Referer")
+            String requestUrl = request.getRequestURL().toString();
+            String queryurl=request.getQueryString();
+            if (StringUtils.isNotBlank(queryurl)){
+                requestUrl = requestUrl+"?"+queryurl;
+            }
+            session.setAttribute("referer",requestUrl);
             response.sendRedirect("/login.html");
             return false;
         }

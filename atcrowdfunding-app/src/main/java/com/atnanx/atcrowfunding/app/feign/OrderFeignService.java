@@ -14,15 +14,17 @@ import java.util.List;
 @FeignClient("ATCROWDFUNDING-ORDER")
 public interface OrderFeignService {
 
-    @PostMapping("/create")
-     ServerResponse<TOrder> create(@RequestBody OrderCreateVo createVo);
+    //序列化成json 字符串传给后端服务
+    /*@RequestBody */
+    @PostMapping("/generate_order")
+    ServerResponse<TOrder> create(@RequestBody OrderCreateVo createVo,@RequestParam("accessToken") String accessToken);
 
     @PostMapping("/pay")
-     String pay(PayVo vo) throws Exception;
+    ServerResponse pay(@RequestBody PayVo vo,@RequestParam("accessToken") String accessToken) ;
 
     @PostMapping("/list")
-     ServerResponse<List<OrderListVo>> orderList(@RequestParam("accessToken") String accessToken);
+    ServerResponse<List<OrderListVo>> orderList(@RequestParam("accessToken") String accessToken);
 
     @GetMapping("/memberOrder")
-     ServerResponse<TOrder> getOrder(@RequestParam("accessToken") String accessToken, @RequestParam("orderNum") String orderNum);
+    ServerResponse<TOrder> getOrder(@RequestParam("accessToken") String accessToken, @RequestParam("orderNum") String orderNum);
 }

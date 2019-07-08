@@ -65,7 +65,15 @@ public class UserLoginRegistController {
         return serverResponse;
     }
 
-
+    /**
+     * @param memberRegisterVo
+     * @return
+     *
+     * SpringCloud：Http+Json;
+     *      @RequestBody:将请求体中的json数据转为指定的这对象
+     *
+     * 以后的post请去都代表接受json数据
+     */
     @ApiOperation("用户注册")
     @PostMapping("/register")
     public ServerResponse<String> register(MemberRegisterReqVo memberRegisterVo) {

@@ -16,12 +16,12 @@ import java.util.List;
  * 这个UserServiceFeign使用configuration指定的FeignConfig；
  * 不指定就是SpringCloud默认配置，传输数据用json；
  */
-@FeignClient(value = "ATCROWDFUNDING-USER",configuration = FeignConfig.class)
+@FeignClient(value = "ATCROWDFUNDING-MEMBER",configuration = FeignConfig.class)
 public interface UserServiceFeign {
 
     @PostMapping("/user/login_by_pwd")
-    ServerResponse<MemberLoginRespVo> loginByPwd(@RequestParam(value = "loginacct", required = true) String loginacct,
-                                            @RequestParam(value = "password", required = true) String password);
+    ServerResponse<MemberLoginRespVo> loginByPwd(@RequestParam(value = "loginacct") String loginacct,
+                                            @RequestParam(value = "password") String password);
 
 
     /**
@@ -35,13 +35,13 @@ public interface UserServiceFeign {
      * @return
      */
     @PostMapping(value = "/user/register",consumes = "application/x-www-form-urlencoded")
-    public ServerResponse<String> register(MemberRegisterReqVo memberRegisterVo);
+    ServerResponse<String> register(MemberRegisterReqVo memberRegisterVo);
 
 
     @GetMapping("/user/info/address")
-    public ServerResponse<List<TMemberAddress>> getUserAddress(@RequestParam("accessToken") String accessToken);
+     ServerResponse<List<TMemberAddress>> getUserAddress(@RequestParam("accessToken") String accessToken);
 
     @PostMapping("/user/info/address")
-    public ServerResponse<TMemberAddress> addUserAddress(@RequestParam("accessToken") String accessToken,
+     ServerResponse<TMemberAddress> addUserAddress(@RequestParam("accessToken") String accessToken,
                                                       @RequestParam("address") String address);
 }

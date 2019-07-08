@@ -34,11 +34,15 @@ public class ProjectController {
     ProjectFeignService projectFeignService;
 
 
+    /**
+     * 计算两天间隔了多少天
+     * @param preTime
+     * @param lastTime
+     * @return
+     */
     private  int differentDayMillisecond (Date preTime,Date lastTime)
     {
-
-
-        int day = (int)((lastTime.getTime()-preTime.getTime())/(3600*1000*24));
+        int day = (int)((lastTime.getTime()-preTime.getTime())/(3600*24*1000));//单位ms,1 day
         return day;
     }
 
@@ -59,7 +63,7 @@ public class ProjectController {
             //20
             data.setTimeLife(day-i);
 
-            model.addAttribute("details",data);
+            model.addAttribute("projectDetail",data);
         }
         return "project/project";
     }

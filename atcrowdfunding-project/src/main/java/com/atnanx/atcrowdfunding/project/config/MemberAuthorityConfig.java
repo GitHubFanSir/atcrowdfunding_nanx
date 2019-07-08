@@ -29,7 +29,7 @@ public class MemberAuthorityConfig extends WebMvcConfigurationSupport {
         log.debug("添加拦截器"); 
         //拦截器先只拦截project的,后面写拦截用户和订单的
         //addPathPatterns是添加自己的规则，这里是指拦截所有请求
-        registry.addInterceptor(new AuthorityInterceptor("back",stringRedisTemplate)).addPathPatterns("/**")
+        registry.addInterceptor(new AuthorityInterceptor("mappers",stringRedisTemplate)).addPathPatterns("/**")
                 .excludePathPatterns( "/swagger-ui.html/**","/swagger-resources/**", "/webjars/**", "/v2/**");
 //                .excludePathPatterns("/static/**","/templates/**"
 

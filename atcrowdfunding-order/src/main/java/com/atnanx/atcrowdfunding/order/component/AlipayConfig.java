@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class AlipayConfig {
+    //商户UID
+    private String sellerId;
     private String appId;
     //异步通知
     private String notifyUrl;

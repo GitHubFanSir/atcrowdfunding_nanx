@@ -49,7 +49,7 @@
             targetProject     指定在该项目下所在的路径 保存bean的目标项目 	.\代表 当前路径下
         -->
         <!--<javaModelGenerator targetPackage="com.mmall.pojo" targetProject=".\src\main\java">-->
-        <javaModelGenerator targetPackage="com.atnanx.atcrowdfunding.core.bean" targetProject="./src/main/java">
+        <javaModelGenerator targetPackage="com.atnanx.atcrowdfunding.core.bean.back" targetProject="./src/main/java">
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <!-- 在targetPackage的基础上，根据数据库的schema(模式)再生成一层package，最终生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="false"/>
@@ -65,7 +65,7 @@
         <!--mapper映射文件(sql Mapper)生成所在的目录 为每一个数据库的表生成对应的SqlMap文件
         	mapper映射文件必须和mapper接口在同一个包下-->
         <!--<sqlMapGenerator targetPackage="mappers" targetProject=".\src\main\resources">-->
-        <sqlMapGenerator targetPackage="mappers" targetProject="../atcrowdfunding-user/src/main/resources">
+        <sqlMapGenerator targetPackage="mappers.back" targetProject="../atcrowdfunding-project/src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
@@ -78,7 +78,7 @@
 
         <!-- targetPackage：mapper接口dao生成的suppress位置 -->
         <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.mmall.dao" targetProject=".\src\main\java">-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.atnanx.atcrowdfunding.user.mapper" targetProject="../atcrowdfunding-user/src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.atnanx.atcrowdfunding.project.mapper.back" targetProject="../atcrowdfunding-project/src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
@@ -106,7 +106,7 @@
             -->
 
 
-          <table tableName="t_member_phone_code" />
+          <table tableName="t_return" />
 
         <!-- geelynote mybatis插件的搭建 -->
     </context>

@@ -2,8 +2,9 @@ package com.atnanx.atcrowdfunding.project.mapper;
 
 import com.atnanx.atcrowdfunding.core.bean.TProjectInitiator;
 import com.atnanx.atcrowdfunding.core.bean.TProjectInitiatorExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TProjectInitiatorMapper {
     long countByExample(TProjectInitiatorExample example);
