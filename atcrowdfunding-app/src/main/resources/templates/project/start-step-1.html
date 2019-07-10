@@ -1,128 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/theme.css">
+      <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+      <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+      <link rel="stylesheet" th:href="@{/css/theme.css}">
 	<style>
-#footer {
-    padding: 15px 0;
-    background: #fff;
-    border-top: 1px solid #ddd;
-    text-align: center;
-}
-#topcontrol {
-  color: #fff;
-  z-index: 99;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  background: #222;
-  position: relative;
-  right: 14px !important;
-  bottom: 11px !important;
-  border-radius: 3px !important;
-} 
+        #footer {
+            padding: 15px 0;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        #topcontrol {
+          color: #fff;
+          z-index: 99;
+          width: 30px;
+          height: 30px;
+          font-size: 20px;
+          background: #222;
+          position: relative;
+          right: 14px !important;
+          bottom: 11px !important;
+          border-radius: 3px !important;
+        }
 
-#topcontrol:after {
-  /*top: -2px;*/
-  left: 8.5px;
-  content: "\f106";
-  position: absolute;
-  text-align: center;
-  font-family: FontAwesome;
-}
+        #topcontrol:after {
+          /*top: -2px;*/
+          left: 8.5px;
+          content: "\f106";
+          position: absolute;
+          text-align: center;
+          font-family: FontAwesome;
+        }
 
-#topcontrol:hover {
-    color: #fff;
-    background: #18ba9b;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
+        #topcontrol:hover {
+            color: #fff;
+            background: #18ba9b;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
 
-.label-type, .label-status, .label-order {
-    background-color: #fff;
-    color: #f60;
-    padding : 5px;
-    border: 1px #f60 solid;
-}
-#typeList  :not(:first-child) {
-    margin-top:20px;
-}
-.label-txt {
-    margin:10px 10px;
-    border:1px solid #ddd;
-    padding : 4px;
-    font-size:14px;
-}
-.panel {
-    border-radius:0;
-}
+        .label-type, .label-status, .label-order {
+            background-color: #fff;
+            color: #f60;
+            padding : 5px;
+            border: 1px #f60 solid;
+        }
+        #typeList  :not(:first-child) {
+            margin-top:20px;
+        }
+        .label-txt {
+            margin:10px 10px;
+            border:1px solid #ddd;
+            padding : 4px;
+            font-size:14px;
+        }
+        .panel {
+            border-radius:0;
+        }
 
-.progress-bar-default {
-    background-color: #ddd;
-}
+        .progress-bar-default {
+            background-color: #ddd;
+        }
+        .tagSelectSpan {
+            background-color: #9d9d9d;
+        }
 	</style>
   </head>
   <body>
- <div class="navbar-wrapper">
-      <div class="container">
-			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			  <div class="container">
-				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
-				</div>
-            <div id="navbar" class="navbar-collapse collapse" style="float:right;">
-              <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
-                    <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-			  </div>
-			</nav>
-      </div>
-    </div>
+
+  <!--导入顶部导航-->
+  <div th:if="${session.loginUser!=null}" th:insert="~{include/include :: login_topbar}"></div>
+  <div th:if="${session.loginUser==null}" th:insert="~{include/include :: unlogin_topbar}"></div>
 
     <div class="container theme-showcase" role="main">
 
-        <div class="container">
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <nav class="navbar navbar-default" role="navigation">
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li>
-                                    <a rel="nofollow" href="index.html"><i class="glyphicon glyphicon-home"></i> 众筹首页</a>
-                                </li>
-                                <li >
-                                    <a rel="nofollow" href="projects.html"><i class="glyphicon glyphicon-th-large"></i> 项目总览</a>
-                                </li>
-                                <li class="active">
-                                    <a rel="nofollow" href="javascript:;"><i class="glyphicon glyphicon-edit"></i> 发起项目</a>
-                                </li>
-                                <li>
-                                    <a rel="nofollow" href="minecrowdfunding.html"><i class="glyphicon glyphicon-user"></i> 我的众筹</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        <div th:insert="~{/include/projectInclude :: project_topbar}"></div>
         
         
         <div class="container">
@@ -194,126 +154,142 @@
 				</b>
 			</blockquote>
 		</div>
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" id="baseInfoForm" th:action="@{/project/start-step-2.html}">
 		<div class="col-md-12 column">
 			<div class="page-header" style="    border-bottom-style: dashed;">
 				<h3>
 					项目信息
 				</h3>
 			</div>
-            <form class="form-horizontal">
+
               <div class="form-group">
+                  <div class="alert alert-danger" role="alert" th:if="${msg!=null}" th:text="${msg}"></div>
                 <label for="inputEmail3" class="col-sm-2 control-label">分类信息</label>
                 <div class="col-sm-10">
-                     <label class="radio-inline">
+                    <!-- <label class="radio-inline">
                       <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 科技
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 设计
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 公益
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 农业
+                    </label>-->
+                    <label class="radio-inline" th:each="sysType:${sysTypes}">
+                        <input type="checkbox" name="typeids" th:value="${sysType.id}"/>
+                        [[${sysType.name}]]
                     </label>
                 </div>
               </div>
-              <div class="form-group">
+              <!--<div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">标签</label>
                 <div class="col-sm-10">
                     <ul style="list-style:none;padding-left:0;">
                         <li style="margin:10px 0">[手机]
-                            <span class="label-txt">手机</span> <span class="label-txt">快充</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
-                        </li>
-                        <li style="margin:10px 0">[数码]
-                            <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
-                        </li>
-                        <li style="margin:10px 0">[电脑]
-                            <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
+                            <span class="label-txt">手机</span>
+                            <span class="label-txt">快充</span>
+                            <span class="label-txt">文字标签</span>
+                            <span class="label-txt">文字标签</span>
+                            <span class="label-txt">文字标签</span>
+                            <span class="label-txt">文字标签</span>
                         </li>
                     </ul>
                 </div>
-              </div>
+              </div>-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">标签</label>
+                    <div class="col-sm-10">
+                        <ul style="list-style:none;padding-left:0;">
+                            <li style="margin:10px 0" th:each="pTag:${sysTags}">[[${pTag.name}]]
+                                <span class="label-txt tagspan" th:each="cTag:${pTag.childTagList}"
+                                      th:tid="${cTag.id}">
+                                [[${cTag.name}]]<input style="display: none" type="checkbox" name="tagids"
+                                                       th:value="${cTag.id}">
+                            </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
               <div class="form-group">
                 <label class="col-sm-2 control-label">项目名称</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" >
+                  <input type="text" name="name" class="form-control" >
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">一句话简介</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control" rows="5"></textarea>
+                  <textarea class="form-control" name="remark" rows="5"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">筹资金额（元）</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;" >
+                  <input type="text" name="money" class="form-control" style="width:100px;" >
                   <label class="control-label">筹资金额不能低于100元,不能高于1000000000元</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">筹资天数（天）</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;" >
+                  <input type="text" class="form-control" name="day" style="width:100px;" >
                   <label class="control-label">一般10-90天，建议30天</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">项目头图</label>
                 <div class="col-sm-10">
-                  <button type="button" class="btn btn-primary btn-lg active">上传图片</button>
+                  <button id="headerImageUploadBtn" type="button" class="btn btn-primary btn-lg active">上传图片</button>
+                    <!--style="display: none"-->
+                    <input id="uploadHeaderInput" type="file" style="display: none"  name="header"/>
                   <label class="control-label">图片上无文字,支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：740*457px</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">项目详情</label>
                 <div class="col-sm-10">
-                  <button type="button" class="btn btn-primary btn-lg active">上传图片</button>
+                    <button id="uploadDetailBtn" type="button" class="btn btn-primary btn-lg active">上传图片 </button>
+                    <input id="uploadDetailsInput" multiple type="file" style="display: none" name="details"/>
                   <label class="control-label">支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：宽740px</label>
                 </div>
               </div>
-            </form>
-		</div>
+
+        </div>
 		<div class="col-md-12 column">
 			<div class="page-header" style="    border-bottom-style: dashed;">
 				<h3>
 					发起人信息
 				</h3>
 			</div>
-            <form class="form-horizontal">
+
               <div class="form-group">
                 <label class="col-sm-2 control-label">自我介绍</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" placeholder="一句话自我介绍，不超过40字">
+                  <input type="text" class="form-control" name="selfintroduction" placeholder="一句话自我介绍，不超过40字">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">详细自我介绍</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control" rows="5" placeholder="向支持者详细介绍你自己或你的团队及项目背景，让支持者在最短时间内了解你，不超过160字"></textarea>
+                  <textarea class="form-control" rows="5" name="detailselfintroduction" placeholder="向支持者详细介绍你自己或你的团队及项目背景，让支持者在最短时间内了解你，不超过160字"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">联系电话</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" placeholder="此信息不会显示在项目页面">
+                  <input type="text" class="form-control" name="telphone" placeholder="此信息不会显示在项目页面">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">客服电话</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" placeholder="此信息显示在项目页面">
+                  <input type="text" class="form-control" name="hotline" placeholder="此信息显示在项目页面">
                 </div>
               </div>
-            </form>
 		</div>
+    </form>
 	</div>
 </div>
                         </div>
                         <div class="panel-footer" style="text-align:center;">
-                            <button type="button" class="btn  btn-warning btn-lg" onclick="window.location.href='start-step-2.html'">下一步</button>
+                            <!--onclick="window.location.href='start-step-2.html'"--><!--'location.href='+|'@{/project/start-step-2.html}'|-->
+                            <button type="button" class="btn  btn-warning btn-lg" th:onclick="submitBaseInfoForm()">下一步</button>
                         </div>
                     </div>
                 </div>
@@ -338,15 +314,51 @@
         </div>
       
     </div> <!-- /container -->
-    <script src="jquery/jquery-2.1.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="script/docs.min.js"></script>
-    <script src="script/back-to-top.js"></script>
+  <script th:src="@{/jquery/jquery-2.1.1.min.js}"></script>
+  <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+  <script th:src="@{/script/docs.min.js}"></script>
+  <script th:src="@{/script/back-to-top.js}"></script>
 	<script>
-$('#myTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    $(".tagspan").click(function () {
+        $(this).toggleClass("tagSelectSpan");
+        if ($(this).hasClass("tagSelectSpan")) {
+            //被选中。把里面的check钩中
+            $(this).find("input[name='tagids']").prop("checked", true);
+        } else {
+            $(this).find("input[name='tagids']").prop("checked", false);
+        }
+
+        console.log($(this).find("input[name='tagids']").prop("checked"));
+    })
+
+    function submitBaseInfoForm() {
+        $("#baseInfoForm").submit();
+    }
+
+    $("#headerImageUploadBtn").click(function () {
+        //模拟鼠标单击这个元素
+        $("#uploadHeaderInput").click();
+    });
+
+    $("#uploadDetailBtn").click(function () {
+        $("#uploadDetailsInput").click();
+    });
+
+    /**
+     *
+     private List<Integer> tagids; //项目的标签id
+
+     private String name;//项目名称
+     private String remark;//项目简介
+     private Integer money;//筹资金额
+     private Integer day;//筹资天数
+     private String headerImage;//项目头部图片
+     private List<String> detailsImage;//项目详情图片
+     */
 	</script>
   </body>
 </html>

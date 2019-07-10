@@ -19,9 +19,9 @@ import com.atnanx.atcrowdfunding.project.service.IProjectService;
 import com.atnanx.atcrowdfunding.project.service.feign.MemberFeignService;
 import com.atnanx.atcrowdfunding.project.vo.ProjectRedisStorageVo;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -30,7 +30,10 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -79,9 +82,7 @@ public class ProjectServiceImpl implements IProjectService {
         stringRedisTemplate.opsForValue().set(Const.projectInfo.REDIS_TEMP_PROJECT_PREFIX + projectTempToken,
                 JsonUtil.obj2Json(projectRedisStorageVo), Const.projectInfo.PROJECT_TEMP_SAVE_EXTIME, TimeUnit.MINUTES);
 
-        Map map = Maps.newHashMap();
-        map.put("projectTempToken", projectTempToken);
-        return ServerResponse.createBySuccess("初始化项目成功", map);
+        return ServerResponse.createBySuccess("初始化项目成功", projectTempToken);
     }
 
     public ProjectRedisStorageVo assemInitProjectRedisStorageVo(Integer memberId, String accessToken, String projectToken) {
@@ -171,31 +172,31 @@ public class ProjectServiceImpl implements IProjectService {
     }
 
     @Override
-    public ServerResponse<List<String>> uploadPhoto(MultipartFile[] file) {
-        List<String> uploadPhotoUrls = Lists.newArrayList();
+    public ServerResponse<String> uploadPhoto(MultipartFile multipartFile) {
+        String uploadFileUrl = "";
         String originalFilename;
         byte[] fileBytes = {};
         String destFileName;
-        for (MultipartFile multipartFile : file) {
-            if (multipartFile != null && !multipartFile.isEmpty() && file.length > 0) {
-                originalFilename = multipartFile.getOriginalFilename();
-                try {
-                    fileBytes = multipartFile.getBytes();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-                destFileName = UUID.randomUUID().toString().replace("-", "") + "_" + originalFilename;
-                String uploadFileUrl = ossTemplate.uploadFile(fileBytes, "pic", destFileName);
-                uploadPhotoUrls.add(uploadFileUrl);
+        if (multipartFile != null && !multipartFile.isEmpty()) {
+            originalFilename = multipartFile.getOriginalFilename();
+            try {
+                fileBytes = multipartFile.getBytes();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
+            destFileName = UUID.randomUUID().toString().replace("-", "") + "_" + originalFilename;
+            uploadFileUrl = ossTemplate.uploadFile(fileBytes, "pic", destFileName);
+
+
         }
 
-        if (CollectionUtils.isEmpty(uploadPhotoUrls)) {
+        if (StringUtils.isBlank(uploadFileUrl)) {
             return ServerResponse.createByErrorMessage("未有文件上传或上传失败");
         }
 
-        return ServerResponse.createBySuccess("上传文件成功", uploadPhotoUrls);
+        return ServerResponse.createBySuccess("上传文件成功", uploadFileUrl);
     }
 
     @Override

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/theme.css">
+      <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+      <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+      <link rel="stylesheet" th:href="@{/css/theme.css}">
 	<style>
 #footer {
     padding: 15px 0;
@@ -72,57 +72,13 @@
 	</style>
   </head>
   <body>
- <div class="navbar-wrapper">
-      <div class="container">
-			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			  <div class="container">
-				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
-				</div>
-            <div id="navbar" class="navbar-collapse collapse" style="float:right;">
-              <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
-                    <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-			  </div>
-			</nav>
-      </div>
-    </div>
+  <!--导入顶部导航-->
+  <div th:if="${session.loginUser!=null}" th:insert="~{include/include :: login_topbar}"></div>
+  <div th:if="${session.loginUser==null}" th:insert="~{include/include :: unlogin_topbar}"></div>
 
     <div class="container theme-showcase" role="main">
 
-        <div class="container">
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <nav class="navbar navbar-default" role="navigation">
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li>
-                                    <a rel="nofollow" href="index.html"><i class="glyphicon glyphicon-home"></i> 众筹首页</a>
-                                </li>
-                                <li >
-                                    <a rel="nofollow" href="projects.html"><i class="glyphicon glyphicon-th-large"></i> 项目总览</a>
-                                </li>
-                                <li class="active">
-                                    <a rel="nofollow" href="javascript:;"><i class="glyphicon glyphicon-edit"></i> 发起项目</a>
-                                </li>
-                                <li>
-                                    <a rel="nofollow" href="minecrowdfunding.html"><i class="glyphicon glyphicon-user"></i> 我的众筹</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        <div th:insert="~{/include/projectInclude :: project_topbar}"></div>
         
         
         <div class="container">
@@ -196,7 +152,7 @@
                                     </blockquote>
                                 </div>
                                 <div class="col-md-12 column">
-                                    <table class="table table-bordered" style="text-align:center;">
+                                    <table id="returnTable" class="table table-bordered" style="text-align:center;">
                                       <thead>
                                         <tr style="background-color:#ddd;">
                                           <td>序号</td>
@@ -210,7 +166,7 @@
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
+                                        <!--<tr>
                                           <td    scope="row">1</td>
                                           <td>￥1.00</td>
                                           <td>无限制</td>
@@ -222,54 +178,62 @@
                                                       <button type="button" class="btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>
                                                       <button type="button" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>
                                           </td>
-                                        </tr>
+                                        </tr>-->
                                       </tbody>
                                     </table>
-                                    <button type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-plus"></i> 添加回报</button>
+                                    <button type="button" class="btn btn-primary btn-lg" id="openReturnAddModal">
+                                        <i class="glyphicon glyphicon-plus"></i> 添加回报
+                                    </button>
                                     <div style="border:10px solid #f60;border-bottom-color: #eceeef;border-width: 10px;width:20px;margin-left:20px;
                                              border-left-color: rgba(221, 221, 221, 0);
                                              border-top-color: rgba(221, 221, 221, 0);
                                              border-right-color: rgba(221, 221, 221, 0);
                                     "></div>
-                                    <div class="panel panel-default" style="border-style: dashed;background-color:#eceeef">
+                                    <div class="panel panel-default" id="returnAddModal"
+                                         style="border-style: dashed;background-color:#eceeef">
                                       <div class="panel-body">
 
 		<div class="col-md-12 column">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">回报类型</label>
+            <form class="form-horizontal" id="returnForm">
+              <div class="form-group" >
+                <label class="col-sm-2 control-label">回报类型</label>
                 <div class="col-sm-10">
                      <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 实物回报
+                      <input type="radio"  name="type" value="0"
+                             data-field="type"> 实物回报
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 虚拟物品回报
+                      <input type="radio" name="type" data-field="type"
+                             value="1"> 虚拟物品回报
                     </label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">支持金额（元）</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;" >
+                  <input type="text" name="supportmoney" class="form-control"
+                         data-field="supportmoney" style="width:100px;" >
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">回报内容</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control" rows="5" placeholder="简单描述回报内容，不超过200字"></textarea>
+                  <textarea class="form-control" name="content"
+                            data-field="content" rows="5" placeholder="简单描述回报内容，不超过200字"></textarea>
                 </div>
               </div>
-              <div class="form-group">
+             <!-- <div class="form-group">
                 <label class="col-sm-2 control-label">说明图片</label>
                 <div class="col-sm-10">
                   <button type="button" class="btn btn-primary btn-lg active">上传图片</button>
                   <label class="control-label">支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：760*510px选择文件</label>
                 </div>
-              </div>
+              </div>-->
               <div class="form-group">
                 <label class="col-sm-2 control-label">回报数量（名）</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;display:inline" >
+                  <input type="text" class="form-control" name="count"
+                         data-field="count" style="width:100px;display:inline" >
                   <label class="control-label">“0”为不限回报数量</label>
                 </div>
               </div>
@@ -277,19 +241,26 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">单笔限购</label>
                 <div class="col-sm-10">
                      <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1"> 不限购
+                      <input type="radio" name="signalpurchase"
+                             data-field="signalpurchase"
+                             value="0"> 不限购
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2"> 限购
+                      <input type="radio" ame="signalpurchase"
+                             data-field="signalpurchase"
+                             value="1"> 限购
                     </label>
-                    <input type="text" class="form-control" style="width:100px;display:inline" >
+                    <input type="text" class="form-control"name="purchase"
+                           data-field="purchase" style="width:100px;display:inline" >
                     <label class="radio-inline">默认数量为1，且不超过上方已设置的回报数量</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">运费(元)</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;display:inline" value="0" >
+                  <input type="text" class="form-control" style="width:100px;display:inline"
+                         name="freight" data-field="freight"
+                         value="0" >
                   <label class="control-label">“0”为包邮</label>
                 </div>
               </div>
@@ -297,10 +268,12 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">发票</label>
                 <div class="col-sm-10">
                      <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 不可开发票
+                      <input type="radio" name="invoice" data-field="invoice"
+                             value="0"> 不可开发票
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 可开发票（包括个人发票和自定义抬头发票）
+                      <input type="radio" name="invoice" data-field="invoice"
+                             id="inlineRadio2" value="1"> 可开发票（包括个人发票和自定义抬头发票）
                     </label>
                 </div>
               </div>
@@ -310,14 +283,16 @@
                      <label class="radio-inline">
                       项目结束后
                     </label>
-                    <input type="text" class="form-control" style="width:100px;display:inline" >
+                    <input type="text" class="form-control" name="rtndate"
+                           data-field="rtndate" style="width:100px;display:inline" >
                     <label class="radio-inline">天，向支持者发送回报</label>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label"></label>
                 <div class="col-sm-10">
-                      <button type="button" class="btn btn-primary">确定</button>
+                      <button type="button" class="btn btn-primary"
+                              id="submitReturn">确定</button>
                       <button type="button" class="btn btn-default">取消</button>
                 </div>
               </div>
@@ -347,8 +322,9 @@
                         </div>
                         </div>
                         <div class="panel-footer" style="text-align:center;">
-                            <button type="button" class="btn  btn-default btn-lg" onclick="window.location.href='start-step-1.html'">上一步</button>
-                            <button type="button" class="btn  btn-warning btn-lg" onclick="window.location.href='start-step-3.html'">下一步</button>
+                            <button type="button" class="btn  btn-default btn-lg"  th:onclick="|window.location.href='@{/project/start-step-1.html}'|">上一步</button>
+                            <!--onclick="window.location.href='start-step-3.html'"-->
+                            <button type="submit" class="btn  btn-warning btn-lg" id="step3Btn">下一步</button>
                             <a class="btn" > 预览 </a>
                         </div>
                     </div>
@@ -374,15 +350,110 @@
         </div>
       
     </div> <!-- /container -->
-    <script src="jquery/jquery-2.1.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="script/docs.min.js"></script>
-    <script src="script/back-to-top.js"></script>
+  <script th:src="@{/jquery/jquery-2.1.1.min.js}"></script>
+  <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+  <script th:src="@{/script/docs.min.js}"></script>
+  <script th:src="@{/script/back-to-top.js}"></script>
+  <script th:src="@{/layer/layer.js}"></script>
+  <script th:src="@{/jquery/jQuery-form-serializer.js}"></script>
 	<script>
-$('#myTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
+    var projectReturns = new Array();
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+    $("#openReturnAddModal").click(function () {
+        $("#returnAddModal").show();
+    });
+
+    // $("#submitReturn").click(function () {
+    //
+    //     $("#returnForm").submit();
+    // });
+
+    //页面一加载将表单的数据进行收集并序列化转为json
+    // $(document).ready(function () {
+    $("#submitReturn").click(function () {
+        //serializer
+        projectReturns.push($("#returnForm").serialize());
+        renderData($("#returnForm").serialize());
+        /*$("#returnForm").each(function () {
+        })*/
+       /*
+      var form = $("#returnForm");
+        var value;
+         var values=[];
+        for (var i=0;i<form.length;i++){
+            value=form.elements[i].value;
+            //将表单数据转换为数字
+            value=Number(value);
+            values.push(value);
+        }
+         return values;*/
+
+       /* $("#returnForm")
+            .serializer()
+            .on("serializer:data", function (e, data) {
+                //只要表单提交了，就会有这个对象
+                console.log(data);
+                //1、将刚才表单的json数据保存起来
+                projectReturns.push(data);
+                //2、将刚才表单的json数据解析放在表格位置
+                renderData(data);
+            });*/
+    });
+
+    function renderData(data) {
+        /**
+         content: "dsadsa"
+         count: "1"
+         freight: "41"
+         invoice: "1"
+         purchase: "1":"2":"10"
+         rtndate: "31"
+         signalpurchase: "1":"0"
+         supportmoney: "11"
+         type: "1"
+         */
+        var tr = $("<tr></tr>");
+        tr.append("<td>"+projectReturns.length+"</td>")
+            .append("<td>"+data.supportmoney+"</td>")
+            .append("<td>"+(data.count=="0"?"无限制":data.count)+"</td>")
+            .append("<td>"+data.purchase+"</td>")
+            .append("<td>"+data.content+"</td>")
+            .append("<td>项目结束后"+data.rtndate+"天</td>")
+            .append("<td>"+(data.freight=="0"?"包邮":data.freight)+"</td>")
+            .append("<td><button type='button' class='btn btn-danger btn-xs'><i class='glyphicon glyphicon-remove'></i></button></td>");
+        $("#returnTable tbody").append(tr);
+
+    }
+
+    $("#step3Btn").click(function () {
+        if(projectReturns.length == 0){
+            layer.alert("请先添加数据");
+        }else {
+            console.log(projectReturns);
+            //提交json数据给远程服务
+            $.ajax({
+                url:'[[@{/project/start-step-3.html}]]',
+                type:"POST",
+                contentType:"application/json;charset=UTF-8",
+                processData:false,
+                data:JSON.stringify(projectReturns),
+                success:function (data) {
+                    //提交成了,
+                    //console.log(data);
+                    //document.write(data);
+                    if(data.code == 0){
+                        location.href='[[@{/start-step-3.html}]]';
+                    }else {
+                        layer.msg("数据有误，请重新录入");
+                    }
+
+                }
+            })
+        }
+    });
 	</script>
   </body>
 </html>

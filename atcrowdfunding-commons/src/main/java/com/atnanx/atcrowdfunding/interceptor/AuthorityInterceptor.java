@@ -107,6 +107,10 @@ public class AuthorityInterceptor implements HandlerInterceptor {
             log.info("权限拦截器拦截到请求,className:{},methodName:{} 并放行",clazzName,methodName);
             return true;
         }
+        if (StringUtils.equals(clazzName,"ProjectCreateController")&& StringUtils.equals(methodName,"uploadPhoto")){
+            log.info("权限拦截器拦截到请求,className:{},methodName:{} 并放行",clazzName,methodName);
+            return true;
+        }
 
         //解析参数,具体的参数key以及value是什么，我们打印日志
         StringBuffer requestParamBuffer = new StringBuffer();

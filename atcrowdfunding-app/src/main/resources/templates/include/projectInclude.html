@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <div class="container" th:fragment="project_topbar">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a rel="nofollow" th:href="@{/index.html}"><i class="glyphicon glyphicon-home"></i> 众筹首页</a>
+                            </li>
+                            <li >
+                                <a rel="nofollow" th:href="@{/project/projects.html}"><i class="glyphicon glyphicon-th-large"></i> 众筹项目</a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" th:href="@{/project/start.html}"><i class="glyphicon glyphicon-edit"></i> 发起众筹</a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" th:href="@{/minecrowdfunding.html}"><i class="glyphicon glyphicon-user"></i> 我的众筹</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

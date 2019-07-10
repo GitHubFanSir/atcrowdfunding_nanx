@@ -9,6 +9,8 @@ import com.atnanx.atcrowdfunding.core.vo.resp.member.MemberLoginRespVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllAllInfoVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectReturnDetailVo;
 import com.atnanx.atcrowfunding.app.feign.ProjectFeignService;
+import com.atnanx.atcrowfunding.app.service.impl.FileUploadServiceImpl;
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,7 +34,10 @@ public class ProjectController {
 
     @Autowired
     ProjectFeignService projectFeignService;
-
+    /*@Autowired
+    private FileFeignService fileFeignService;*/
+    @Autowired
+    private FileUploadServiceImpl fileUploadService;
 
     /**
      * 计算两天间隔了多少天
@@ -86,11 +91,11 @@ public class ProjectController {
      * 跳转页面，并需要传参做验证
      */
     @GetMapping("/start-step-1.html")
-    public String startstep1(HttpSession session, Model model,String hasReadProtocol){
+    public String startstep1(HttpSession session, Model model){
         //展示step1页面之前
         //1、获取项目令牌;
         MemberLoginRespVo loginUser = (MemberLoginRespVo) session.getAttribute("loginUser");
-        ServerResponse response = projectFeignService.init(loginUser.getAccessToken(),hasReadProtocol);
+        ServerResponse response = projectFeignService.init(loginUser.getAccessToken(),"0");
         String projectTempToken = (String) response.getData();
         session.setAttribute("projectToken",projectTempToken);
 
@@ -139,9 +144,11 @@ public class ProjectController {
         //上传头图
         if(!file.isEmpty()){
             log.debug("头图{}文件上传完成",file.getOriginalFilename());
-            ServerResponse<List<String>> response = projectFeignService.uploadPhoto(new MultipartFile[]{file}, loginUser.getAccessToken());
+           /* FileRibbonService fileRibbonService = new FileRibbonService();
+            ServerResponse<String> response = fileRibbonService.uploadPhoto(file, loginUser.getAccessToken());*/
+            ServerResponse<String> response = fileUploadService.uploadPhoto(file);
             if (response.isSuccess()){
-                String url = response.getData().get(0);
+                String url = response.getData();
                 projectBaseInfoVo.setHeaderImage(url);
                 log.info(response.getMsg());
             } else {
@@ -152,22 +159,24 @@ public class ProjectController {
 
         }
 
-        List<String> details=null;
+        List<String> details=Lists.newArrayList();
         //上传详情图
         if(files!=null){
-            ServerResponse<List<String>> response = projectFeignService.uploadPhoto(new MultipartFile[]{file}, loginUser.getAccessToken());
-            details = response.getData();
-           /* for (MultipartFile multipartFile : files) {
-                if(!multipartFile.isEmpty()){
-                    log.debug("详情{}文件上传完成",multipartFile.getOriginalFilename());
+//            FileRibbonService fileRibbonService = new FileRibbonService();
 
-                    String url = ossTemplate.upload(multipartFile.getBytes(), multipartFile.getOriginalFilename());
-                    details.add(url);
+            if (files.length > 0){
+                for (MultipartFile multipartFile : files) {
+                    if (multipartFile != null && !multipartFile.isEmpty()) {
+                        log.debug("详情{}文件上传完成",multipartFile.getOriginalFilename());
+                        ServerResponse<String> response = fileUploadService.uploadPhoto(multipartFile);
+//                        ServerResponse<String> response = fileRibbonService.uploadPhoto(multipartFile, loginUser.getAccessToken());
+                        String url = response.getData();
+                        details.add(url);
+                    }
                 }
-            }*/
+            }
         }
         projectBaseInfoVo.setDetailsImage(details);
-
 
         //把这两个令牌封装好，这些之前都在session中
         projectBaseInfoVo.setAccessToken(loginUser.getAccessToken());
@@ -176,13 +185,15 @@ public class ProjectController {
 
         log.debug("准备好的项目所有信息的vo数据：{}，这些数据将发送出去",projectBaseInfoVo);
         //远程服务保存项目信息
-        ServerResponse<String> response = projectFeignService.saveBaseInfo(projectBaseInfoVo);
+        ServerResponse<String> response = projectFeignService.saveBaseInfo(projectBaseInfoVo,loginUser.getAccessToken());
         if(response.isSuccess()){
             return "redirect:/start-step-2.html";
         }else {
             //失败回到之前页面并进行回显
             redirectAttributes.addFlashAttribute("vo",projectBaseInfoVo);
-            redirectAttributes.addFlashAttribute("msg","服务异常，请重新录入");
+            String msg = response.getMsg();
+            log.error(msg);
+            redirectAttributes.addFlashAttribute("msg",msg);
             return "redirect:/project/start-step-1.html";
         }
 

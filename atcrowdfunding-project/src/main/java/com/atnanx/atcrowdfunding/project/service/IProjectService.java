@@ -27,7 +27,7 @@ public interface IProjectService {
 
     ServerResponse<String> saveBaseInfo(ProjectBaseInfoVo baseInfoVo);
 
-    ServerResponse<List<String>> uploadPhoto(MultipartFile[] file);
+    ServerResponse<String> uploadPhoto(MultipartFile file);
 
     ServerResponse addReturn(List<ProjectReturnReqVo> returns);
 

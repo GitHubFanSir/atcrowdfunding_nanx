@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -67,7 +68,7 @@ public class ProjectCreateController {
 
     @ApiOperation("项目创建第2步-项目基本信息保存")
     @PostMapping("/savebaseinfo")
-    public ServerResponse<String> saveBaseInfo(ProjectBaseInfoVo baseInfoVo){
+    public ServerResponse<String> saveBaseInfo(@RequestBody ProjectBaseInfoVo baseInfoVo){
         return projectService.saveBaseInfo(baseInfoVo);
     }
 
@@ -127,7 +128,7 @@ public class ProjectCreateController {
     @ApiOperation("项目提交审核申请")
     @ApiImplicitParam(name = "status", value = "保存状态，1保存项目，0保存草稿 管理不会审核", required = true)
     @PostMapping("/submit")
-    public ServerResponse<String> submit(BaseVo vo,Integer status){
+    public ServerResponse<String> submit(@RequestBody BaseVo vo,Integer status){
         ServerResponse serverResponse = projectService.submitOrDraftProjectToDb(vo,status);
         return serverResponse;
     }
@@ -135,7 +136,7 @@ public class ProjectCreateController {
     @ApiOperation("项目草稿保存")
     @ApiImplicitParam(name = "status", value = "保存状态，1 保存项目，0 保存草稿 管理不会审核", required = true)
     @PostMapping("/tempsave")
-    public ServerResponse<String> tempsave(BaseVo vo,Integer status){
+    public ServerResponse<String> tempsave(@RequestBody BaseVo vo,Integer status){
         ServerResponse serverResponse = projectService.submitOrDraftProjectToDb(vo,status);
         return serverResponse;
     }
@@ -150,14 +151,17 @@ public class ProjectCreateController {
      *             <input type="file" name="header" >
      *     </form>
      * 服务器：
+     * ,
+     *   consumes = MediaType.MULTIPART_FORM_DATA_VALUE
+     *   produces = {MediaType.APPLICATION_JSON_UTF8_VALUE},
      *
+     *      @RequestParam("file")  @RequestBody
      * @param file
      * @return
      */
     @ApiOperation("项目图片上传")
-    @PostMapping("/upload_photo")
-    public ServerResponse<List<String>> uploadPhoto(@RequestParam("file") MultipartFile[] file,
-                                            @RequestParam("accessToken") String accessToken) {
+    @PostMapping(value = "/upload_photo", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ServerResponse<String> uploadPhoto(@RequestPart(value = "file") MultipartFile file) {
 
         return projectService.uploadPhoto(file);
     }

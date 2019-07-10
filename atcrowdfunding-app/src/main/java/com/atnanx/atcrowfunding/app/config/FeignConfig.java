@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.support.SpringEncoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
+//用feign做微服务分布式调用时调用配置
 @Configuration
 public class FeignConfig {
 
@@ -20,4 +20,5 @@ public class FeignConfig {
     public Encoder feignFormEncoder() {
         return new SpringFormEncoder(new SpringEncoder(messageConverters));
     }
+
 }

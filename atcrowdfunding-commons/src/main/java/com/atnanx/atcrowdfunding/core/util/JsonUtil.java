@@ -31,6 +31,9 @@ public class JsonUtil {
 
         //忽略 在json字符串中存在，但是在java对象中不存在对应属性的情况。防止错误
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        //这样空字符串变为空。如果您希望它转换为实际的空List
+        objectMapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT,true);
     }
 
     public static <T> String obj2Json(T obj){

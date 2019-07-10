@@ -8,20 +8,23 @@ import com.atnanx.atcrowdfunding.core.vo.req.project.ProjectBaseInfoVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllAllInfoVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectAllInfoVo;
 import com.atnanx.atcrowdfunding.core.vo.resp.project.ProjectReturnDetailVo;
+import com.atnanx.atcrowfunding.app.config.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-@RequestMapping("/project")
-@FeignClient("ATCROWDFUNDING-PROJECT")
+//@RequestMapping("/project") fallback = FileUploadServiceHystrixImpl.class,
+@FeignClient(value = "ATCROWDFUNDING-PROJECT", path = "/project",configuration = FeignConfig.class)
 public interface ProjectFeignService {
 
 
-    //初始化创建
+    //第1步，初始化创建
     @PostMapping("/create/init")
-    ServerResponse init(@RequestParam("accessToken") String accessToken,@RequestParam(value = "hasReadProtocol",defaultValue = "1") String hasReadProtocol);
+    ServerResponse init(@RequestParam("accessToken") String accessToken,
+                        @RequestParam(value = "hasReadProtocol",defaultValue = "1") String hasReadProtocol);
 
     //"获取项目系统标签信息"
     @GetMapping("/sys/tags")
@@ -31,15 +34,15 @@ public interface ProjectFeignService {
     @GetMapping("/sys/type")
     ServerResponse<List<TType>> sysType();
 
-    //保存众筹项目基本信息
+    //第2步，保存众筹项目基本信息
     @PostMapping("/create/savebaseinfo")
-    ServerResponse<String> saveBaseInfo(@RequestBody ProjectBaseInfoVo baseInfoVo);
+    ServerResponse<String> saveBaseInfo(@RequestBody ProjectBaseInfoVo baseInfoVo,@RequestParam("accessToken") String accessToken);
 
-    //保存众筹项目回报信息
+    //第3步，保存众筹项目回报信息
     @PostMapping("/create/return")
     ServerResponse<String> addReturn(@RequestBody List<ProjectReturnDetailVo> returns);
 
-    //保存众筹项目基本信息
+    //第4步，保存众筹项目基本信息
     @PostMapping("/create/submit")
     ServerResponse<String> submit(@RequestBody BaseVo vo);
 
@@ -51,8 +54,10 @@ public interface ProjectFeignService {
     @GetMapping("/info/detail/{projectId}")
     ServerResponse<ProjectAllAllInfoVo> getDetail(@PathVariable("projectId") Integer projectId);
 
-    //图片上传
-    @PostMapping("/create/upload_photo")
-    ServerResponse<List<String>> uploadPhoto(@RequestParam("file") MultipartFile[] file,
-                                                @RequestParam("accessToken") String accessToken);
+
+    //图片上传 @RequestParam("file") @RequestBody @RequestPart(value = "file")
+    @PostMapping(value = "/create/upload_photo" ,produces = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    ServerResponse<String> uploadPhoto(@RequestPart(value = "file") MultipartFile file);
+
 }
